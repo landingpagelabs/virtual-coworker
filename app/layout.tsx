@@ -1,0 +1,73 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import { FaviconNotifier } from '@/components/FaviconNotifier';
+import { ModalSmall } from '@/components/ModalSmall';
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'http://localhost:3000';
+
+const title = 'Virtual Coworker | Top Filipino Talent';
+const description =
+  'Hire a virtual assistant who\'s so good, you forget they\'re offshore. Hand-picked Philippines talent, managed HR, lifetime replacement guarantee.';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  icons: {
+    icon: { url: '/images/header/Tab=Default.png', type: 'image/png' },
+  },
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: 'Virtual Coworker',
+    type: 'website',
+    locale: 'en_AU',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: title }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: ['/og-image.jpg'],
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+          defer
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
+          defer
+        />
+        <script
+          src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+          defer
+        />
+        <script
+          src="https://cdn.cantclone.com/cantclone.js"
+          data-key="79529ca0889e4fe999fc25027293b992"
+          defer
+        />
+      </head>
+      <body>
+        <FaviconNotifier />
+        {children}
+        <ModalSmall />
+      </body>
+    </html>
+  );
+}
