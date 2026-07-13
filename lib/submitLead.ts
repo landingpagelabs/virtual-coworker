@@ -15,8 +15,15 @@ declare global {
  * Fire-and-forget by design — the booking UX must never block on, or break
  * because of, lead capture. keepalive lets the request survive if the visitor
  * navigates away mid-flight.
+ *
+ * Returns the captured values so the booking modal can prefill Calendly with
+ * them, or undefined if capture threw. Callers must treat undefined as "no
+ * prefill" and still open the modal — never as an error.
  */
-export function submitLead(form: HTMLFormElement, source: 'hero' | 'section') {
+export function submitLead(
+  form: HTMLFormElement,
+  source: 'hero' | 'section',
+): Record<string, string> | undefined {
   try {
     const raw = new FormData(form);
     const data: Record<string, string> = {};
@@ -51,7 +58,10 @@ export function submitLead(form: HTMLFormElement, source: 'hero' | 'section') {
       body: JSON.stringify(data),
       keepalive: true,
     }).catch(() => {});
+
+    return data;
   } catch {
     // Never let lead capture break the booking flow.
+    return undefined;
   }
 }

@@ -20,12 +20,15 @@ export default function HeroSection({ section }: HeroSectionProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const { errors, validate, clearError } = useFormErrors();
   const [showCalendly, setShowCalendly] = useState(false);
+  const [lead, setLead] = useState<Record<string, string> | null>(null);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const isValid = validate(formRef.current);
     if (!isValid) return;
-    submitLead(formRef.current!, 'hero');
+    // Held in state (not passed inline) so its identity is stable — CalendlyModal
+    // re-initialises the widget whenever `lead` changes.
+    setLead(submitLead(formRef.current!, 'hero') ?? null);
     setShowCalendly(true);
   };
 
@@ -162,7 +165,7 @@ export default function HeroSection({ section }: HeroSectionProps) {
                 </div>
               </form>
             </div>
-            <CalendlyModal open={showCalendly} />
+            <CalendlyModal open={showCalendly} lead={lead} />
           </div>
         </div>
       </div>

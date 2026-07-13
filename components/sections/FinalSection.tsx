@@ -36,12 +36,15 @@ export default function FinalSection({ section }: FinalSectionProps) {
   const [month, setMonth] = useState('');
   const { errors, validate, clearError } = useFormErrors();
   const [showCalendly, setShowCalendly] = useState(false);
+  const [lead, setLead] = useState<Record<string, string> | null>(null);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const isValid = validate(formRef.current);
     if (!isValid) return;
-    submitLead(formRef.current!, 'section');
+    // Held in state (not passed inline) so its identity is stable — CalendlyModal
+    // re-initialises the widget whenever `lead` changes.
+    setLead(submitLead(formRef.current!, 'section') ?? null);
     setShowCalendly(true);
   };
 
@@ -191,7 +194,7 @@ export default function FinalSection({ section }: FinalSectionProps) {
                 <img className="final-down_img" src="/images/sections/final/final_2.avif" width={1060} height={630} alt="bottom image" loading="lazy" decoding="async" />
               </div>
             </div>
-            <CalendlyModal open={showCalendly} />
+            <CalendlyModal open={showCalendly} lead={lead} />
           </div>
         </div>
       </div>
