@@ -1,12 +1,7 @@
 const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      // The US page is the default market page; canonical ad URLs are
-      // /us and /apac (per Tyce, 2026-07-13).
-      { source: '/', destination: '/us', permanent: false },
-    ];
-  },
+  // No root page by design: the only public URLs are /us, /apac, /congrats
+  // (per Tyce, 2026-07-13 — root serves nothing, no redirect).
 };
 
 export default nextConfig;
