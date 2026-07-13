@@ -1,22 +1,7 @@
 import PageBuilder from '@/components/PageBuilder';
-import { pageBySlugQuery } from '@/lib/queries';
-import { fetchSanity } from '@/lib/sanity';
+import { getPage } from '@/lib/content';
 
-export const revalidate = 60;
-
-export default async function HomePage() {
-  const page = await fetchSanity(pageBySlugQuery, { slug: 'us' });
-
-  if (!page) {
-    return (
-      <main className="page-shell">
-        <div className="container">
-          <h1>Сторінка не знайдена</h1>
-          <p>Перевірте налаштування CMS або створіть сторінку з slug «home».</p>
-        </div>
-      </main>
-    );
-  }
-
+export default function HomePage() {
+  const page = getPage('us')!;
   return <PageBuilder page={page} />;
 }

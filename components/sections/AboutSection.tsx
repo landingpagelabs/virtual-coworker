@@ -1,4 +1,4 @@
-import { urlForImage } from '@/lib/sanity';
+import { imageUrl } from '@/lib/content';
 
 type SanityImage = { _key?: string; asset?: { _ref?: string } } & Record<string, unknown>;
 
@@ -41,9 +41,8 @@ export default function AboutSection({ section }: AboutSectionProps) {
 
   const gallery = section.galleryImages?.length ? section.galleryImages : null;
 
-  const mainImageUrl = section.mainImage
-    ? urlForImage(section.mainImage).url()
-    : '/images/sections/cs/Agent Panel (1).png';
+  const mainImageUrl =
+    imageUrl(section.mainImage) ?? '/images/sections/cs/Agent Panel (1).png';
 
   return (
     <section className="about">
@@ -79,7 +78,7 @@ export default function AboutSection({ section }: AboutSectionProps) {
                 {gallery
                   ? gallery.map((img, i) => (
                       <div className="about-image" key={img._key ?? i}>
-                        <img src={urlForImage(img).url()} alt="" />
+                        <img src={imageUrl(img) ?? ''} alt="" />
                       </div>
                     ))
                   : FALLBACK_GALLERY.map((name) => (

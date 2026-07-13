@@ -1,0 +1,1504 @@
+{
+  "_createdAt": "2026-06-26T14:47:55Z",
+  "_id": "WML3b1jxzn1AOFDHaWD8NE",
+  "_rev": "xQftXEVT4gCxh9fgViu6sQ",
+  "_system": {
+    "base": {
+      "id": "WML3b1jxzn1AOFDHaWD8NE",
+      "rev": "TgU4MC6BsSaaoGK2aqW4hO"
+    }
+  },
+  "_type": "page",
+  "_updatedAt": "2026-07-08T14:31:36Z",
+  "description": "Hire a virtual assistant who's so good, you forget they're offshore. Hand-picked Philippines talent, managed HR, lifetime replacement guarantee.",
+  "sections": [
+    {
+      "_key": "ec2d43892087",
+      "_type": "heroSection",
+      "formTitle": "Complete The Form Below To Book Your Free Consultation",
+      "guarantee": "Every Hire Is Backed By Our Lifetime Replacement Guarantee",
+      "heading": "Hire a virtual assistant who's so good, you forget they're offshore",
+      "subtitle": "We hand-pick the Philippines' best talent for your role and handle all the HR. They work your hours, use AI to get more done and cost a fraction of a local salary."
+    },
+    {
+      "_key": "6ec517441208",
+      "_type": "csSection",
+      "awards": [
+        {
+          "_key": "a2e6c209e503",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3a571223b89e312f3140797c9fe34c7fd139829b-153x154-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "ab6ab005a7be",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-b727f83b50500e6ebbd2c72d7f2d6c1845b190c5-162x162-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "e7b76cf606b5",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-08ead0549e296f21a79b53d96e8b64e1bf26012e-145x145-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "7a395534f614",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-68d411959182f1469a623b2e3b669f8dd57fe36f-157x170-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "d971d8165be6",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-8a7effef155b3db0e1f40508efe4d622c5c4bf57-165x165-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "fd6e991bb2da",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3f5c8247390352974a718c29839d3f0f9eccc1c3-165x165-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "14a3ddc2c201",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9b4226e08ff9562abed00f66b53067b68bc23b8c-144x60-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "9d9576c3aa7b",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-10bbf5718dbe18c17d3f24d69acafd6777b86aa6-205x123-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "face7df1d26f",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-00d0609369cc8af7ba9613805bccc6129c0764bc-238x100-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0c7e174e7f8d",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9f82a4489cdcbd9a880d40c8cff7816efd130281-396x43-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "0733fe8370ec",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-50c84f7f52bf9a0b17a2c5ed8a48f444e2b1a938-151x151-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "awardsLabel": "Awards & Features",
+      "reviews": [
+        {
+          "_key": "eb48504f149f",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-95c6cd84243d3eb01c7003c2478cecb4cb7e4a3b-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "Construction business owner",
+          "industry": "Construction",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-95c6cd84243d3eb01c7003c2478cecb4cb7e4a3b-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Douglas",
+          "quote": "When I had a question early on, someone called me back the same day. That kind of accountability is rare at this price point."
+        },
+        {
+          "_key": "f63840c4a457",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-cc77d3ba012bff9323c92bbe2a0727c7356f0d19-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "Cofounder, RecruitLoop",
+          "industry": "Recruitment",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-cc77d3ba012bff9323c92bbe2a0727c7356f0d19-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Paul Slezak",
+          "quote": "Virtual Coworker provided us with high-quality profiles, worked with us around our own screening/recruitment processes, and provided great talent."
+        },
+        {
+          "_key": "959d54103d1c",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8fedf051dfb9cdfd928ab4ababd156c46197f420-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "Director, HR Industry",
+          "industry": "HR Industry",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8fedf051dfb9cdfd928ab4ababd156c46197f420-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Leonie",
+          "quote": "To be able to zero in on a suitable person with the skills that we required from Day One has been amazing."
+        },
+        {
+          "_key": "9f8d1f9d1688",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6fe42076362e1260b1def9b6811b55aac791eb33-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "B2B SaaS founder",
+          "industry": "SaaS",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-95c6cd84243d3eb01c7003c2478cecb4cb7e4a3b-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Dave",
+          "quote": "Our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost."
+        },
+        {
+          "_key": "bdcc2f25ddf8",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d4857554e517b9ade24704c4b0a862265c3b0ba7-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "Ace Accounting",
+          "industry": "Accounting",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d4857554e517b9ade24704c4b0a862265c3b0ba7-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Elyse Campbell",
+          "quote": "Partnering with Virtual Coworker to hire a full-time remote accountant has been a game-changer for our firm."
+        },
+        {
+          "_key": "23583af736b7",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d4857554e517b9ade24704c4b0a862265c3b0ba7-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "Director, Yacht and Boat",
+          "industry": "Marine",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8439b1bab84e17bf5b6e0d2a76646b3e5a288e8a-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Rebecca Jones",
+          "quote": "After interviewing several candidates via email and phone, we felt confident that our new coworker would fit in well with our dynamic business."
+        },
+        {
+          "_key": "b7d99da697d0",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8439b1bab84e17bf5b6e0d2a76646b3e5a288e8a-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "E-commerce website owner",
+          "industry": "E-commerce",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8db06a45e4b437ecc6c4535b38e9f4d96d8cd2c3-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Lexi",
+          "quote": "As a small company, we really couldn't afford a call center, but by outsourcing this to the Philippines, we have been able to provide much better customer service for our customers."
+        },
+        {
+          "_key": "28c48f13d9ae",
+          "avatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8db06a45e4b437ecc6c4535b38e9f4d96d8cd2c3-78x78-png",
+              "_type": "reference"
+            }
+          },
+          "company": "Marketing agency owner",
+          "industry": "Agency",
+          "modalAvatar": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-69e0a30438adee1bacb49f2138404ccc8c3e4e2d-52x52-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Matthew",
+          "quote": "Six months in, our senior team is back to doing strategy and client work and our margins look better for it."
+        }
+      ],
+      "reviewsLabel": "Reviews",
+      "title": "15+ Years Staffing Businesses With Top Quality Talent At Incredible Prices"
+    },
+    {
+      "_key": "34317841f459",
+      "_type": "aboutSection",
+      "ctaAuthor": "Paul Slezak · Cofounder, RecruitLoop",
+      "ctaQuote": "We were so pleased with the quality of our first hire that we quickly sought out a second",
+      "ctaText": "Every hire is backed by our lifetime replacement guarantee. Plus, it's 100% free to get started, and you don't pay until your new team member starts work",
+      "galleryImages": [
+        {
+          "_key": "5007bbe73ec8",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-b9de5f252e4353630d70dde4c4859572faf5e0f0-583x868-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "b5635d087427",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-dbf49e4d226cb066abff85a5e6b785498fbfc988-583x868-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5ae72260ae14",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-63fdfec90ba0780a4f2604c5deb1e38f566a5f56-583x868-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "mainImage": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-889d1114ce1d75129461ca7455ad5dc9abac34d4-777x928-png",
+          "_type": "reference"
+        }
+      },
+      "starQuotes": [
+        "Exactly what I needed",
+        "Feels like part of the team"
+      ],
+      "subtitle": "More work than your team can handle? Hiring locally means months of recruiting, weeks of paid leave, and a $70k+ salary. A Virtual Coworker joins your team full-time or part-time, works your hours, and is dedicated to your business. Each one is recruited for your exact role with years already in it, and the payroll, HR, and paperwork all run through us. With 600,000 professionals in our network, most roles fill within days. And if the fit's ever wrong, we replace them free.",
+      "title": "Fill that key role with a great offshore hire for an 80% discount and without the HR hassles"
+    },
+    {
+      "_key": "214fb1d829ae",
+      "_type": "capabilitiesSection",
+      "panelHeading": "Have Your Next Great Hire In Days",
+      "subtitle": "Some VAs just send emails and do the basic work AI now handles. Not your Virtual Coworker. We’ve spent 15 years building a network of the best talent in the Philippines. They’re experienced professionals with real skills, trained on AI, so one person completes the work of several. Because having someone use AI beats just having AI. Plus, they’re fluent in English, have great work ethics, no Roth IRAs to fund, and you only pay for hours worked.",
+      "tags": [
+        "They stay for years",
+        "Onshore quality, or better",
+        "No handholding needed",
+        "Custom-recruited for your exact role"
+      ],
+      "title": "But can’t AI just do it?",
+      "trainedLogos": [
+        {
+          "_key": "4f9c3c238808",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-d8e19a30247b898d272da2d4e6629794a7db872b-115x41-svg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "5ec54d18c45c",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-60d6b265e02fe628bb56fff8f57c64c8ec5d732a-107x41-svg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "78f60193de63",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-b725b19938fc171893518ca9f5df6d366b573fec-96x41-svg",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "40243cf8d755",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-2d81926f93d550b742cb54f4991ed1e3bbae80aa-103x41-svg",
+            "_type": "reference"
+          }
+        }
+      ],
+      "trainedTitle": "Your Virtual Coworkers Come Fully Trained In:"
+    },
+    {
+      "_key": "197b4a6af414",
+      "_type": "showcaseSection",
+      "bottomText": "Plus, much, much more!",
+      "items": [
+        {
+          "_key": "75e085b3e8ee",
+          "problem": "Too much work and not enough hands?",
+          "solution": "Add a proven pro in days, without months of recruiting or the $70k salary."
+        },
+        {
+          "_key": "b3f12a5162b2",
+          "problem": "Want more booked calls on the calendar?",
+          "solution": "An Appointment Setter chases every lead and follow-up, so booked calls keep landing."
+        },
+        {
+          "_key": "e778b8ab6f70",
+          "problem": "Admin and scheduling pile up across your team?",
+          "solution": "A Virtual Assistant or EA takes the day-to-day, so your team gets back to high-value work."
+        },
+        {
+          "_key": "23a1d6bc89d3",
+          "problem": "Invoices, reconciliation, and reporting always behind?",
+          "solution": "A Bookkeeper runs QuickBooks, invoicing, and follow-ups, so the books stay current and right."
+        },
+        {
+          "_key": "7bf6c5b0f9a6",
+          "problem": "Getting more support tickets than your team can handle?",
+          "solution": "A Customer Service Specialist works the queue in your voice, so customers get fast replies."
+        }
+      ],
+      "title": "Here's how a Virtual Coworker grows your business without growing payroll"
+    },
+    {
+      "_key": "1ec1962a48c0",
+      "_type": "talentSection",
+      "ctaAuthor": "Dave · B2B SaaS founder",
+      "ctaQuote": "“Our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost”",
+      "ctaText": "Every hire is backed by our lifetime replacement guarantee. Plus, it’s 100% free to get started, and you don’t pay until your new team member starts work",
+      "industries": [
+        "Ecommerce",
+        "Professional Services",
+        "Marketing Agencies",
+        "Software & Tech",
+        "Real Estate",
+        "Trade Services"
+      ],
+      "industryListTitle": "Delivering wins for businesses in all industries",
+      "talents": [
+        {
+          "_key": "a57c239f3bfe",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4a7cbbb750e1e0bc149645a585d54908242d1a73-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Jasmine T.",
+          "role": "Executive Assistant"
+        },
+        {
+          "_key": "23d5aaa42ece",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-13fbe5c8b92924def2031b598c355ac59fc4e007-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Marco D.",
+          "role": "Virtual Assistant"
+        },
+        {
+          "_key": "a7618b334efe",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e9a3b605c5017d2d2ce41376e75c5ad2b82b0f28-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Kristine S.",
+          "role": "Social Media Manager"
+        },
+        {
+          "_key": "4c71fa737e65",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-095b7cee5a8f25866012fc2938f5f60538f8933f-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Miguel D.",
+          "role": "Appointment Setter"
+        },
+        {
+          "_key": "f9366d6f2990",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0e783fb89f97a12c96052d1dad37374a9597fe17-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Joanna M.",
+          "role": "Bookkeeper"
+        },
+        {
+          "_key": "55ecd7aaaffd",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4e9271febcfc916f5983737e61794d1718244975-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Bianca T.",
+          "role": "Marketing Assistant"
+        },
+        {
+          "_key": "b21ec97a671c",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-57d3e0d08992a46561f1a8d0132646ac67fdc71c-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Justin L.",
+          "role": "Customer Service Specialist"
+        },
+        {
+          "_key": "1a2dc938befc",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a0879e6403933d93fd69ebe14250666c31c897a7-750x900-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Daniel R.",
+          "role": "Accountant"
+        }
+      ],
+      "title": "We find and then further train the best talent in the Philippines (hire one or a whole team)"
+    },
+    {
+      "_key": "0806a5c5decc",
+      "_type": "reasonsSection",
+      "reasons": [
+        {
+          "_key": "780b379c7759",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-7d13ca20c64a95e2c59024563a11ba762f0cdf96-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Posting a job yourself means a hundred resumes to sort. Here you brief a US-based expert once, and our 600,000-strong network does the rest. You interview the few worth meeting, and pick.",
+          "title": "Your shortlist, ready in days"
+        },
+        {
+          "_key": "0f28923f991c",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a5878cc884a5946c814ed83f723c381f80d78fcb-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Every Virtual Coworker speaks fluent English, has done the role for years and most even hold a university degree. They have great culture and understand how to work well with Western companies.",
+          "title": "Fluent English from day one"
+        },
+        {
+          "_key": "a96154d3955a",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dba333ef7e88ccb0a26447e554915e2b3d77e17d-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Our software tracks every hour, so you never pay for a minute they didn't work. Benefits, equipment and paid leave are on us. You can start at just 20 hours a week.",
+          "title": "Only pay for hours worked"
+        },
+        {
+          "_key": "9aa3914ef5d9",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-73fbbfd6919433de2ef5eca036f74c04c91c991e-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Recruitment costs nothing, and so do HR, payroll, training, and their computer and internet. It all folds into one hourly rate, up to 80% below a local salary.",
+          "title": "One flat rate covers everything"
+        },
+        {
+          "_key": "8347e782fa7b",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-799ff555c9f0e99708ec82a97443159036178d50-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Your Virtual Coworker gets great pay, benefits, and a career path. Our own team runs on the same model we sell, and many of our people have stayed a decade.",
+          "title": "We take care of our people"
+        },
+        {
+          "_key": "1bbc64e3a804",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-18575e3fcff52843b6e68796b01f06e750534094-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Your Virtual Coworker is online when your team is, so questions get quick answers, they sit in your meetings, and nothing waits overnight. The same dedicated person, every day, working like they're right there in the office.",
+          "title": "They work your hours"
+        },
+        {
+          "_key": "8d6c942ae5a4",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4284b714bf739d2aead19f949d35240a9981fc0f-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "A recruiter screens every applicant, testing skills and English and running an FBI-grade background check. Only the few who clear everything reach you. You interview them free, and nobody starts until you're sure.",
+          "title": "Custom-recruited for your exact role"
+        },
+        {
+          "_key": "972778cc2f6d",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-2a0f1b4d5ff89eb62ca80987b55f49bbc640fc9b-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "If your Virtual Coworker ever leaves or the fit isn't right, we recruit a replacement free, usually within days. Everything they learned is passed on, so you never start over from zero.",
+          "title": "Free lifetime replacement"
+        },
+        {
+          "_key": "0615b060e662",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6177ba75a939a1d799b080b0448d2179fee4dff1-1047x480-png",
+              "_type": "reference"
+            }
+          },
+          "text": "Start with one person part-time, take them full-time when you're ready, or build a team. Add help when work piles up and pull back when it's quiet. There's no lock-in.",
+          "title": "Scale up or down anytime"
+        }
+      ],
+      "title": "Why busy teams that want proven talent who stick around for the long term use us rather than DIYing it"
+    },
+    {
+      "_key": "2a3ac2c2fe83",
+      "_type": "reviewsSection",
+      "reviews": [
+        {
+          "_key": "7b62af297bd4",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3451c9b291b790bc546235cfe4218ac666978ac2-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Douglas",
+          "quote": "We tried offshore VAs through other platforms and didn't have great luck. Felt transactional, lots of turnover. Virtual Coworker has been a different experience… What sets VC apart is that there's an actual account team behind the placement. When I had a question early on, someone called me back the same day. That kind of accountability is rare at this price point.",
+          "role": "Construction business owner"
+        },
+        {
+          "_key": "9c0b744be38c",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-03dc0dee494ffbed784a546ef92ce70a87f7c1bf-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Paul Slezak",
+          "quote": "We had very high expectations in terms of the caliber of virtual team members we'd bring into the business and were so pleased with the quality of our first hire that we quickly sought out a second… The support and account management team behind Virtual Coworker is also great. High Fives all around.",
+          "role": "Cofounder, RecruitLoop"
+        },
+        {
+          "_key": "22d2d10b0289",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e78e1a85384ee705ef253d93e6a28bd5316a831e-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Matthew",
+          "quote": "Six months in, our senior team is back to doing strategy and client work and our margins look better for it. Our VA is smart, organized, and adapted quickly to our tools (ClickUp, Notion, Meta Ads Manager). Communication via Slack has been seamless across time zones. Honestly the best ops decision we made last year.",
+          "role": "Marketing agency owner"
+        },
+        {
+          "_key": "0f08daa6218f",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6494d38f1162c39d64a217f676585b0c793ed056-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Elyse Campbell",
+          "quote": "Partnering with Virtual Coworker to hire a full-time remote accountant has been a game-changer for our firm. Their expertise and seamless integration into our team have dramatically enhanced our productivity and service quality.",
+          "role": "Ace Accounting"
+        },
+        {
+          "_key": "5c1fe870ce1a",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8e337b44a9a62165c0da2f38491e66a9e1a3af38-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Richard",
+          "quote": "Virtual Coworker placed a patient coordinator who has been with us almost a year now… our no show rate has dropped noticeably since she started doing reminder calls. What I value most is continuity. She's been the same person the whole time, knows our patients and workflows, and feels like part of the team even though she's remote..",
+          "role": "Wellness practice owner"
+        },
+        {
+          "_key": "8ba1e8447436",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-acc5ea5bfb1ac19e44dab53a47b3fae95a918c0d-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Gerry Brummer",
+          "quote": "They understood our requirements and matched us with a capable virtual assistant. The onboarding was simple, and the quality of candidates was higher than expected. Their focus on reliability and proactive support made the whole experience feel very seamless and dependable.",
+          "role": "Manager, Designers Oil Perfumes"
+        },
+        {
+          "_key": "15c889f28ace",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8729f03d20ea1b1f282c1e2afbd8a6eeda47a048-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Dave",
+          "quote": "We hired an SDR through Virtual Coworker to run outbound for a B2B SaaS product. Honest assessment: not every part was perfect… but our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost.",
+          "role": "B2B SaaS founder"
+        },
+        {
+          "_key": "de10ba6f44f7",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fb40635f481a59ea443de706cde9d0372050b3ad-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Kyrstin H.",
+          "quote": "Working with Virtual Coworker has been a true breeze… The recruiting process was well organized, and I feel we were matched very well. I have not found anything that our employees are unable to accomplish. I share my experience with all businesses who will listen.",
+          "role": "General Manager"
+        },
+        {
+          "_key": "b2d2deb082be",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e8fe99d214fca63a0f306354fe320e22f7daea9d-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Mark Valli",
+          "quote": "Utilizing Virtual Coworker to hire a full-time remote social media manager was a strategic and fruitful decision for our agency. Our team member… has brought fresh, innovative ideas and exceptional engagement strategies that have significantly boosted our online presence and client satisfaction.",
+          "role": "Valli Digital Marketing"
+        },
+        {
+          "_key": "fd190030cf8b",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-101285c6751ccf9e8a892df3b53f4429735e2c5c-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Clayton",
+          "quote": "During tax season, I needed extra support for my accounting firm without hiring a full-time local employee. The assistant I was matched with handled scheduling, CRM updates, and client coordination independently with very little guidance.",
+          "role": "Accounting firm owner"
+        },
+        {
+          "_key": "94b6efc73de6",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6ea889e7cfcc107ca1402e606b3cef5b0a64fc38-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Jason Schulz",
+          "quote": "It is simply too expensive to hire someone with the right skill set here in Australia… We needed someone who wanted to become a part of our business. The recruitment process with Virtual Coworker felt familiar and allowed us to bring on someone we were excited about. This was almost one year ago now and we still enjoy working with the same coworker today.",
+          "role": "Founder, My Nappies"
+        },
+        {
+          "_key": "9ce01478213c",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e6e2e5a501c1d833eb4ab32679b1c1edc103abf6-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "E-commerce owner",
+          "quote": "We met with a few agencies but chose Virtual Coworker as they have been around the longest and have a good support team. I liked the Account Manager aspect and the fact I was talking to someone on the ground in Australia (literally around the corner!) throughout. Good genuine company to work with.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "12c02e1e86b5",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8086f4fcbda6e6d7fbb5515767edfcb81aae74f6-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Edwin Onggo",
+          "quote": "There are massive opportunities to be had in hiring offshore talent in my opinion. The hard part is having to go through the arduous recruitment process to find the talent you need. That's why I found Virtual Coworker really useful. The team were great and made it super easy to screen and hire the manpower I needed.",
+          "role": "Founder, GiggedIn"
+        },
+        {
+          "_key": "fcfa015cd49c",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-68ffd2e6c8c35c7c630b5b9e2fdc6c0515f5ebdd-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Lexi",
+          "quote": "VC made this easy by pre-scanning all candidates and giving us a shortlist to interview. All spoke great English and had loads of experience in call centers. They also send us through daily reports and screenshots of the work done and handle the whole HR side of it… We treat the staff like part of our team and hardly notice they are not here.",
+          "role": "E-commerce website owner"
+        },
+        {
+          "_key": "35e18dd0a8af",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c9a4e47d2be3f04f1f091079f07099d3df981dc4-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Leonie",
+          "quote": "To be able to zero in on a suitable person with the skills that we required from Day One has been amazing. The alternative would have been spending large sums on trying out and training different applicants… The screening process of Virtual Coworker has enabled us to get straight into work without complications.",
+          "role": "Director, HR Industry"
+        },
+        {
+          "_key": "8b0c27e70986",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e76ea90185cfa033cd33f32d01f19c81989be274-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Logan Merrick",
+          "quote": "I have worked with a number of virtual staff services. However Kevin and the team at Virtual Coworker have provided me with the best value to date. They are responsive, helpful and went beyond the call to ensure our needs were met. I strongly recommend Virtual Coworker to anyone looking for virtual staff.",
+          "role": "Strategic Director, Buzinga Apps"
+        },
+        {
+          "_key": "9607c7a75b3e",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-24054c43370c3b099e87e3d7333f9f246c86705e-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Christian Luckow",
+          "quote": "I continue to be impressed by her. She has a level of skills and motivation that I would expect from a good permanent (onsite) resource. She works with limited guidance and is quickly becoming invaluable to my business.",
+          "role": "CEO, Omniveta Australia"
+        },
+        {
+          "_key": "68a7a016f2ff",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-393d5101001935a7933696d3889fa76c08a0a855-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Rebecca Jones",
+          "quote": "Now, some two years down the track, we are absolutely delighted with our valued colleague… She is proactive and enthusiastic to a degree that continually exceeds our expectations. In fact, our “Virtual Coworker” has become a good friend and is very much a part of our team.",
+          "role": "Director, Yacht and Boat"
+        },
+        {
+          "_key": "1d41b293c272",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-080e18e0e343cd93c851ed6eee31826d73fde47f-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Mindy Prestage",
+          "quote": "Virtual Coworker has given us a gift. Our VC is amazing; even better is she is part of our team. The recruitment process was painless… Our VC has been with us now for six months, and we have been able to take her from part-time to full-time almost immediately.",
+          "role": "Owner, Asad & CO Lawyers"
+        },
+        {
+          "_key": "834946ee079c",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-09bdfc3d501ef7e88f411da73dcbce6e42cd6cc2-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Syakirah Sinin",
+          "quote": "The candidates I have been offered all matched the requirements I needed. I was pleased, and at peace of mind as I knew, I was able to track what they do through the Daily Report and screenshots… I now have three workers employed through Virtual Coworker – all of quality and caliber.",
+          "role": "Marketing Executive, Yaktails Media"
+        },
+        {
+          "_key": "205e0745c405",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-85cc840b2b2dda003793e487abf0e91126d787f4-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Doug Kane",
+          "quote": "What impresses me most about Virtual Coworker is their strong support system and the professionalism of their accounting team. They were highly responsive, easy to communicate with, and consistently delivered accurate work.",
+          "role": "Founder, Harbor Village Cleaners"
+        },
+        {
+          "_key": "bdced9dcc355",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0205c65d0fd118f8c5caf8e8238df40bfea4cf95-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Asad Ali",
+          "quote": "What I found most impressive about this company was their professionalism and consistency in delivering quality work. The virtual assistant was quick to understand my requirements and adapt to my workflow, which made collaboration very smooth.",
+          "role": "Owner, Asad & CO Lawyers"
+        },
+        {
+          "_key": "2f07ed675357",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-3edaaa9f22f3ec171eeff533ccd4088c69294c41-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Adam Mark",
+          "quote": "Most impressive about Virtual Coworker was their ability to quickly provide skilled and well-matched virtual assistants who understood the work requirements from the start. Their onboarding process was smooth… which reduced training time.",
+          "role": "Marketing Director, Quality Obsessions"
+        },
+        {
+          "_key": "2c81dd02e7d7",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a2663b42964793a17c83ddddabbb776470b6aa35-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Robert Liam",
+          "quote": "They were very responsive and supportive. The team listened to feedback, addressed concerns quickly, and stayed in regular contact to make sure everything was running smoothly and meeting expectations.",
+          "role": "Co-Founder, Genuine Appliances Repair"
+        },
+        {
+          "_key": "0b3040c49d29",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f923abd716164649da51547e556a254593f3915a-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "David Boyd",
+          "quote": "We're a pure play online financial services marketing company and when I needed a VA to help with growing admin tasks I reached out to Virtual Coworker. They found me an awesome VA with loads of work experience in finance. Honestly, it's something I should have done a long time ago.",
+          "role": "Director, Credit Card Compare"
+        },
+        {
+          "_key": "ed59f731c59a",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-43585d531d311a35e48e704858125d01ef404a91-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Rob Lambert",
+          "quote": "I've used freelance services in the past, but the difference with Virtual Coworker is that they manage the hiring process and any issues that might come up along the way, resulting in a staff member becoming part of the team. I'd highly recommend Virtual Coworker to anyone who's looking for great, hard-working talent at affordable rates.",
+          "role": "CEO, Web Company"
+        },
+        {
+          "_key": "2213ef675573",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-aa09e009c5207f135b895f949696aabe85ae8584-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Nigel Moore",
+          "quote": "My Experience with Virtual Coworker has been great. I highly recommend them for sourcing Filipino team members! Our team member has been fantastic – she fits into our team perfectly. I've already recommended Virtual Coworker to quite a few business associates.",
+          "role": "Director, Moore Technology"
+        },
+        {
+          "_key": "6866029d2ee6",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a5ffa434ac246c57d19467eb259c46590446be03-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Thuy Pham",
+          "quote": "They take the time to understand what you require from support staff and give you quality people to interview. You can tell that a bit of effort goes into the screening process on their end… It definitely cut the time it would have taken to source workers myself.",
+          "role": "Co-owner, Spectrum"
+        },
+        {
+          "_key": "00ab243555b2",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-dd8d72c658643b24f42140dcdd8f90af65eb08ee-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "David Sullivan",
+          "quote": "We're very happy with the results our web developer has given us. He's been able to work autonomously and hiring him proved valuable to the team.",
+          "role": "Managing Director, The Learning Deli"
+        },
+        {
+          "_key": "cdf9616134e1",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-caed662f425e838bee190294b54794ca6f431d5c-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Ashleigh Hoult",
+          "quote": "Right from the start, I found utilizing the services of Virtual Coworker to be seamless… My Virtual Assistant, Francis, was personable, easy to instruct, and performed the tasks with ease. Outsourcing the admin tasks that usually bogged me down during the work week lifted a huge weight off my shoulders.",
+          "role": "Director, The PromoDonna"
+        },
+        {
+          "_key": "b67b900ea2e8",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-adacfdb202e67df07d94a7365c9ba13b63734e55-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "David Krynauw",
+          "quote": "My experience with Virtual Coworker has been Very positive. They are easy to deal with and very helpful in terms of finding staff for my needs. I used an assistant for website development in WordPress, and she was excellent… nothing was too much to ask of her.",
+          "role": "CEO, ProActive Media"
+        },
+        {
+          "_key": "0a35caf8a8c9",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-8465540e644a5e095734872f0793aa15dd6147bf-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "David Fuller",
+          "quote": "My personal outsourcing process was long and drawn out, but ever since Virtual Coworker connected me with an amazing WordPress developer, I'm wondering why I didn't do it sooner! It's allowed me to focus on what I really love, which is spending time with and creating value for my clients.",
+          "role": "Creative Director, Essendon Creative"
+        },
+        {
+          "_key": "08272f2d4962",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-820fd18f6b6ce6a8339e72569c8d20d132b88617-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Ralph B",
+          "quote": "At first, we were a bit skeptical about how well it would actually work with someone joining our team remotely… Yet they made the entire process a breeze… their screening process was quite impressive. We would highly recommend using Virtual CoWorker's services if you are at all considering a remote talent workforce. F",
+          "role": "Director"
+        },
+        {
+          "_key": "0b3b943c0bd2",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bc7f240ed6541514051ca7583f12b02f12a9cd5d-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Antonio",
+          "quote": "Honestly couldn't be happier with Virtual Coworker. The onboarding process was seamless, the VA we were matched with is fantastic, and the communication throughout has been excellent. If you're on the fence about hiring a virtual assistant, this is the place to start.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "f5eb9bd97008",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-0940577cf6ce6a01b6adede96c3c558dc923c711-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Benjamin",
+          "quote": "Joe our new virtual assistant hired through Virtual Coworker, has hit the ground running. From day one, he's been proactive… He's already made meaningful contributions, recommending tools and processes that strengthen how we communicate across the team. It's great to have another strategic, operationally-minded virtual assistant on the team.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "1973ccb30e32",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-a46166d1c77e8756924113bc1a25ac90302da2d0-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Real estate owner",
+          "quote": "Managing a small real estate company became overwhelming with all the admin tasks and scheduling. Hiring a dedicated VA saved me hours every week and allowed me to focus more on growing the business. The onboarding process was smooth and the match was exactly what I needed.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "1f71e8110a40",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-9410d1d297f47dfc1d5456bdc0b026128c9fa024-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Verified client",
+          "quote": "Bringing in remote customer support helped us improve response times significantly within weeks. The hiring and setup process was efficient, and even after an early mismatch, the replacement turned out to be an excellent fit.",
+          "role": "Customer support · Trustpilot"
+        },
+        {
+          "_key": "ae32be580eae",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-bffa4b6d93da1ac20ca83e5b204b0bf3c5661951-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Brent",
+          "quote": "They've helped us scale by connecting us with really high-quality staff and the whole process has been seamless from start to finish. Communication has been great and the candidates have fit right in with our business.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "83a4aed2a77a",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-26909fe213044eb6a1590e74af5004696bebdbff-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Noah",
+          "quote": "We've been working with Stephanie through Virtual Coworker for 6 months now and she's been an awesome addition to our team. Her ability to quickly grasp concepts and get a real understanding of our business has been terrific.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "baaabe445c80",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-4cd628e3f822af4bd7a95588d4ec46dd4db8a369-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Jeffrey",
+          "quote": "Lorraine is very efficient, proactive and thorough. She's prompt with tasks and has a great feel for our brand, keeping everything consistent across all outward-facing communications and social media. She's a fantastic support, keeping me on track and making sure everything runs smoothly.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "3bb815ee4af6",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6fb3ebbb2bbfd9bdec9cfdc0eb0e6a7dfeaa4fa9-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Eddie",
+          "quote": "We're very impressed with Ryan's work ethic and drive. He consistently shows strong leadership and plays an important role within the team. His positive impact doesn't go unnoticed and we genuinely value what he brings.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "39dfc34c82bb",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-69fe208b12af9ede98ac763b24571d5d063f4dad-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Lance",
+          "quote": "Kate has become a key part of our team in a short time. She's skilled, reliable, and adds real value to the business every day.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "ea39c5b819ee",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-26909fe213044eb6a1590e74af5004696bebdbff-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Naomi",
+          "quote": "Eliah was so very helpful and patient. Not being a tech person I had some difficulties getting things sorted / done, but Eliah saved the day. The whole process of onboarding a new assistant has been swift and professional.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "ef599e9e0755",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-66e7c327f978336322b82b113b092f574a4f30d2-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Justin",
+          "quote": "We worked with our part-time virtual designer for over 2 years. Great service and support. Only reason we stopped was because we decided to go in a different direction.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "ba2526fc5747",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d53f6f0fb908c48ef0366b77bcfa0a202e99fa9f-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Verified client",
+          "quote": "I've had a great experience working with my virtual assistants. They're dependable, communicate clearly, and consistently deliver strong results, which has made my workload much easier to handle.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "a384537c4fd4",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-f1ef459c3e8976ba57585df3c1b0b937862e65aa-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "John",
+          "quote": "I've been working with Ryan for almost a year now and it's been a really positive experience throughout. They have made the whole thing so easy.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "7409f9a45750",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-74952f71feb702258a3233061b60b134ff31cda2-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Verified client",
+          "quote": "Joe has been amazing to work with. He's a great addition to the team and always brings professionalism and positivity.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "37ac883ca4d3",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c4ecdeb37b8424135dbecf58844701b2e2308607-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Sayuri",
+          "quote": "My VA is absolutely amazing—I truly enjoy working with her. She's reliable, efficient, and a pleasure to collaborate with.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "f9db12b5de17",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c4a0899f87ffea8e306355a6e0dfcd3c6e0f0e35-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Suze Orman",
+          "quote": "Overall, our experience has been positive from start to finish.",
+          "role": "Co-Founder, Taylored Touch Massage & Beauty Spa"
+        },
+        {
+          "_key": "6f5aa5e7e2b7",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-c0a3d99afc5d0746131bc5b1a7d0baa9a3ebbea2-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Tomoe",
+          "quote": "They always support our business! Truly amazing customer support!",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "668c1b8068e4",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-d0bd82a1f9a0faa373c8240fc3efef2fb5421ba3-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Matthew",
+          "quote": "One of the best companies I have worked with. Very friendly staff and their management team is top notch. Highly recommend them for your office needs.",
+          "role": "Verified review · Trustpilot"
+        },
+        {
+          "_key": "9fadfa991354",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-588364026e806b67a173981725043128a81c6c25-132x132-png",
+              "_type": "reference"
+            }
+          },
+          "name": "Finance Manager",
+          "quote": "Virtual Coworker is always correct with their data management… The team is also easy to deal with. No, we are very happy with their work.",
+          "role": "Healthcare company · Clutch"
+        }
+      ],
+      "title": "Here's what businesses say about their Virtual Coworkers..."
+    },
+    {
+      "_key": "6a198d18a730",
+      "_type": "workSection",
+      "quoteAuthor": "Leonie · Director, HR industry",
+      "quoteText": "To be able to zero in on a suitable person with the skills that we required from Day One has been amazing",
+      "text": "We do everything we can to get the match right with your very first Coworker. Fifteen years of matching, specialist recruiters, and a 600,000-strong network mean we almost always do. You'll either get a perfect fit first time, or we'll find another for you, free. And if your Coworker ever moves on down the road, the next one's free too. Their work is documented from day one, so nothing they know walks out the door. Plus, you don't pay anything until your new team member actually starts working.",
+      "title": "Every hire is backed by our lifetime replacement guarantee"
+    },
+    {
+      "_key": "89bd476391a5",
+      "_type": "stepsSection",
+      "steps": [
+        {
+          "_key": "a8514d58bd72",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-fe6e60711372986b443246c719a7811a1f96df9a-700x362-png",
+              "_type": "reference"
+            }
+          },
+          "strapline": "Step 1",
+          "text": "Book a quick and free consultation with our outsourcing specialist. We’ll explain how it works, pricing and answer all your questions.",
+          "title": "Get free advice from an outsourcing expert"
+        },
+        {
+          "_key": "24d7effb6546",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-e8fef746a2092298638e5e1f2d9ee91561ebd225-700x362-png",
+              "_type": "reference"
+            }
+          },
+          "strapline": "Step 2",
+          "text": "If it’s a fit, we start recruiting, and give you a shortlist of pre-vetted candidates within days. You interview them and select your favorite.",
+          "title": "Receive your hand-picked shortlist"
+        },
+        {
+          "_key": "977c135a2e6e",
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-12e3bf9970812414eee0a29b122d3c7e47b169ca-700x362-png",
+              "_type": "reference"
+            }
+          },
+          "strapline": "Step 3",
+          "text": "Finally, the work that’s been piling up gets done. Support tickets get answered faster, more calls get booked on the calendar and you hit your next revenue milestone.",
+          "title": "Grow past the bottleneck"
+        }
+      ],
+      "title": "3 easy steps to get a great team member without the hiring hassle"
+    },
+    {
+      "_key": "ae16f188a451",
+      "_type": "finalSection",
+      "downImages": [
+        {
+          "_key": "fc42d9fe0d5f",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9936d2e7792764c6783560cc2f915077481263ae-1061x633-png",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "632128a67003",
+          "_type": "image",
+          "asset": {
+            "_ref": "image-4d657cacb0047764fdac4786fb18990b5d4871a4-1060x630-png",
+            "_type": "reference"
+          }
+        }
+      ],
+      "formTitle": "Complete The Form Below To Get Pricing And Book Your Free Consultation",
+      "strapline": "Free Consultations Still Available For",
+      "subtitle": "If your team has more work than hands, this is for you. Book your free call today, interview pre-vetted candidates within days, and your new team member could be clearing the backlog in less than two weeks. You don’t pay anything until they start, and there’s no lock-in. Claim your spot below while this month’s free consultations last.",
+      "title": "Your next US-quality team member is waiting to help... and for a fraction of the price"
+    },
+    {
+      "_key": "fc8837290b5a",
+      "_type": "faqSection",
+      "faqs": [
+        {
+          "_key": "3a58c79f2f6d",
+          "answer": "AI is great at the repetitive parts. What it still can't do is chase a supplier who's gone quiet, calm a frustrated customer, or flag the thing that looks off before it costs you. The best results come from a person who uses AI, and every Virtual Coworker works with the same tools you do.",
+          "question": "Can't AI just do this now?"
+        },
+        {
+          "_key": "a2f663676ac8",
+          "answer": "Matching is the part we obsess over. A recruiter who hires for your type of role maps the tasks, hours, and tools, then screens every candidate against exactly that. You only ever see a shortlist built for the real job, and you make the final call.",
+          "question": "How do I know you'll match me with the right person?"
+        },
+        {
+          "_key": "15cf696edc04",
+          "answer": "Then we replace them free, however long they've been with you. That's the lifetime replacement guarantee. Every Virtual Coworker has an account team behind them who check in, handle the HR, and step in early when something's off. A bad hire is our problem to fix, not yours to absorb.",
+          "question": "What if it doesn't work out, or my assistant leaves?"
+        },
+        {
+          "_key": "bb4cb6f2ca79",
+          "answer": "They work the hours you set, with full overlap across your workday, so they're online when you are. You can message them, jump on a call, and get same-day turnaround the way you would with someone down the hall. Those hours are agreed before they start, so the overlap is real from day one, not something you're left to chase later. Teams running on US and Australian time do this every day, and most say that within a couple of weeks it stops feeling remote at all.",
+          "question": "Will they actually work my hours and time zone?"
+        },
+        {
+          "_key": "dc210b1c02e3",
+          "answer": "Fluent, and you don't have to take our word for it: you interview every candidate and hear their English for yourself before anyone starts. The Philippines is the fourth-largest English-speaking country in the world, with English taught from grade school, and every Virtual Coworker is screened for clear written and spoken English before they reach your shortlist. That clarity is why so many clients put them on the front line, in support and reception roles, talking to their own customers.",
+          "question": "How good is their English and communication?"
+        },
+        {
+          "_key": "1cb0ee7ecd7d",
+          "answer": "You can absolutely post the role yourself and sort the replies. Posting the job was never the hard part though. The hard part is working out who can actually do the work, communicate clearly, keep your hours, and still be there in six months, and that's the exact part we take off you. We source, screen, and shortlist for it, then stay involved with an account team and the HR handled, so you skip the weeks that hiring usually eats and go straight to interviewing people who already fit. And when a hire you found yourself falls through, you start over from zero. Here, every placement is backed by our lifetime replacement guarantee. The teams who value this most have already tried it the hard way and don't want to do it again.",
+          "question": "How is this different from Upwork or hiring someone myself?"
+        },
+        {
+          "_key": "c1307900878b",
+          "answer": "Up to 80% less than hiring locally, once you count everything. With a Virtual Coworker you pay for the agreed hours, not payroll tax, benefits, equipment, office space, recruitment fees, or the weeks lost trying to hire. The cheapest VA online usually costs more in the end, because work that needs constant fixing eats your day. Pricing depends on the role and the hours, and you get the exact monthly number before you interview anyone, no mystery bill after you've already said yes.",
+          "question": "How much does it cost, and is it cheaper than hiring locally?"
+        },
+        {
+          "_key": "3eeee182c562",
+          "answer": "Most roles go from a short briefing call to a shortlist within days; you interview the candidates, pick the one you want, and set the start date. On security, you decide exactly which tools, inboxes, and permissions your Virtual Coworker gets. Every one of them has passed an FBI-grade background check and works under confidentiality, and you get daily reports, so nothing happens out of sight.",
+          "question": "How fast can I get started, and is my data safe?"
+        },
+        {
+          "_key": "0a79f0f6ab23",
+          "answer": "There's no lock-in. You go month to month, scale up or down, or cancel anytime, and billing only starts once your Virtual Coworker starts work. Because we have to keep earning your business every month instead of trapping you in a contract, your account team stays on top of the placement. A lot of clients stay for years, and that's the point: we'd rather keep you because the work is good than because the paperwork says you have to.",
+          "question": "Am I locked into a contract, or can I cancel anytime?"
+        },
+        {
+          "_key": "32fb60b336f9",
+          "answer": "You don't touch any of it. Your Virtual Coworker is engaged through us, so there's no overseas payroll to run and no employment tax or benefits to administer. You get one simple invoice for the hours worked, and that's the whole arrangement. The admin that makes a local hire slow and expensive is exactly the part we take off your plate.",
+          "question": "How do I pay them, and do you handle payroll and invoicing?"
+        },
+        {
+          "_key": "4c42ab8bf28b",
+          "answer": "They're in your Slack or Teams, your meetings, and your tools from day one, working your hours. A success manager runs a structured onboarding with you, then stays on the placement, checking in and stepping in early if anything's off. Even time off is handled: leave is requested in advance and planned around your workload, so you're never left guessing. It's why the line that keeps showing up in our reviews is “feels like part of the team.”",
+          "question": "How does a Virtual Coworker integrate with my team?"
+        },
+        {
+          "_key": "7b233bb7f0a4",
+          "answer": "Most agencies match you from a database of whoever's available. We recruit fresh for every single role, with a recruiter who only places your type of role, which is why our matches stick. Your first call is with a US-based outsourcing specialist, not an offshore queue, and they'll tell you straight if we're not the right fit. And while most providers guarantee a replacement for a few months, ours is free for life.",
+          "question": "How are you different from other VA agencies?"
+        },
+        {
+          "_key": "bf4644379458",
+          "answer": "The vetting happens long before you meet anyone. A specialist recruiter who places your type of role screens every candidate against the actual work, tests their skills and their English, and runs an FBI-grade background check. Out of everyone who applies, very few make it through, so the interview is you choosing between strong options instead of filtering out weak ones. And because we screen this hard, we can afford to back every placement with a lifetime replacement guarantee.",
+          "question": "How do you vet and screen your candidates?"
+        },
+        {
+          "_key": "a6b28e153662",
+          "answer": "The Philippines, and that's a deliberate choice. English is taught from grade school, the professional remote-work culture runs deep, and the hours can be set to overlap your day. Just as important, we're one of the most-followed staffing companies in the country, so a lot of the best talent comes to us before they go anywhere else. We're choosing the right person for your role, never scraping for whoever's free.",
+          "question": "Where are your assistants based, and why the Philippines?"
+        },
+        {
+          "_key": "8b35618aedb9",
+          "answer": "Part-time from 20 hours a week, or full-time from day one. You tell us the workload and we match you to the right person for it, and you never pay for hours you don't need. Plenty of teams begin part-time on the tasks eating the most time, then scale up as the relationship proves itself. Starting small is a low-risk way to see the fit for yourself, and because there's no lock-in, you can adjust the hours as your business changes.",
+          "question": "Can I hire part-time, or only full-time?"
+        }
+      ],
+      "title": "Frequently asked questions"
+    },
+    {
+      "_key": "0eff221070d0",
+      "_type": "proofBarSection",
+      "reviews": "400+",
+      "text": "Join 400+ businesses that trust Virtual Coworker to help them grow without the hefty overhead of local hires"
+    }
+  ],
+  "slug": {
+    "_type": "slug",
+    "current": "us"
+  },
+  "title": "Home"
+}

@@ -6,26 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "studio": "cd studio && npm run dev -- --port 3334",
-    "studio:seed": "node studio/scripts/seed.js"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@portabletext/react": "3.0.0",
-    "@sanity/client": "6.7.1",
-    "@sanity/icons": "2.0.0",
-    "@sanity/image-url": "2.1.1",
-    "@sanity/types": "3.19.0",
-    "@sanity/ui": "1.8.0",
-    "@sanity/vision": "4.0.0",
     "next": "14.2.5",
-    "next-sanity": "6.0.0",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "styled-components": "^6.4.2"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@sanity/cli": "3.19.0",
     "@types/node": "20.14.2",
     "@types/react": "18.3.4",
     "@types/react-dom": "18.3.0",
