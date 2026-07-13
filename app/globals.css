@@ -316,7 +316,8 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .final_wrapper{padding-top:30px;}
 .final_head{display:flex;flex-direction:column;text-align:center;align-items:center;width:100%;max-width:714px;margin:0 auto;}
 .final_strapline-wrap{margin-bottom:15px;}
-.final_title-wrap{width:100%;max-width:600px;margin:0 auto;margin-bottom:20px;margin-top:15px;}
+/* 660px so the longer APAC heading wraps in 3 lines, not 4 ("Fix width", 5350:12467) */
+.final_title-wrap{width:100%;max-width:660px;margin:0 auto;margin-bottom:20px;margin-top:15px;}
 .final_text-wrap{margin-bottom:30px;}
 .final-form{width:100%;max-width:714px;margin:auto;background-color:#FFF;padding:16px 10px 10px 10px;border-radius:4px;box-shadow:0 1px 1px 0 rgba(0,0,0,0.05),0 4px 6px 0 rgba(34,42,53,0.04),0 24px 68px 0 rgba(47,48,55,0.05),0 2px 3px 0 rgba(0,0,0,0.04);}
 .final_down{display:flex;flex-direction:row;gap:20px;align-items:center;margin-top:80px;width:100%;max-width:100%;}
@@ -403,8 +404,9 @@ li{text-decoration:none;color:inherit;list-style:none;}
   .talent_list-2{flex-wrap:wrap;}
   .talent-carousel-decor{max-width:35px;}
   .reasons_wrapper{padding:30px 0;}.reasons_cta img{max-width:90px;}.reasons_item{max-width:100%;}
-  /* Only 3 cards visible on load (Figma annotation 5251:15147) */
-  .reviews_item:nth-child(n+4){display:none;}.reviews_list.expanded .reviews_item:nth-child(n+4){display:block;}.reviews_item{max-width:100%;}
+  /* Only 3 cards visible on load (5251:15147); the list's first child is the
+     decor div, so n+5 = review items 4 and up */
+  .reviews_item:nth-child(n+5){display:none;}.reviews_list.expanded .reviews_item:nth-child(n+5){display:block;}.reviews_item{max-width:100%;}
   .item_faq{max-width:100%;}
   .steps_wrapper{padding:30px 0;}
   .steps_list{display:flex;flex-direction:row;flex-wrap:nowrap;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
