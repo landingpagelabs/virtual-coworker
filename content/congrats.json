@@ -28,7 +28,7 @@
       "_type": "congratsHeroSection",
       "strapline": "We’re looking forward to speaking with you, and...",
       "subtitle": "On the call, we’ll show you how it works, walk you through pricing, and answer every question you have. Please note that your attendance is required.",
-      "title": "You’re one step closer to  getting desired outcome  without big pain point"
+      "title": "You’re one step closer to a hand-picked hire who clears the backlog and stays for years"
     },
     {
       "_key": "3aef0188c8c4",
@@ -62,6 +62,21 @@
         }
       ],
       "title": "Important! To confirm your call, follow the 3 steps below:"
+    },
+    {
+      "_key": "congrats-reviews",
+      "_type": "reviewsSection",
+      "title": "Here’s what businesses say about their Virtual Coworkers..."
+    },
+    {
+      "_key": "congrats-faq",
+      "_type": "faqSection"
+    },
+    {
+      "_key": "congrats-social",
+      "_type": "congratsSocialSection",
+      "title": "We look forward to meeting you at our call!",
+      "facebookUrl": "https://www.facebook.com/virtualcoworkerinc"
     }
   ],
   "slug": {

@@ -13,6 +13,10 @@ import StepsSection from '@/components/sections/StepsSection';
 import FinalSection from '@/components/sections/FinalSection';
 import FaqSection from '@/components/sections/FaqSection';
 import ProofBarSection from '@/components/sections/ProofBarSection';
+import CongratsHeaderSection from '@/components/sections/CongratsHeaderSection';
+import CongratsHeroSection from '@/components/sections/CongratsHeroSection';
+import CongratsStepsSection from '@/components/sections/CongratsStepsSection';
+import CongratsSocialSection from '@/components/sections/CongratsSocialSection';
 
 interface Section {
   _type: string;
@@ -60,15 +64,26 @@ function renderSection(section: Section) {
       return <FaqSection {...props} />;
     case 'proofBarSection':
       return <ProofBarSection {...props} />;
+    case 'congratsHeaderSection':
+      return <CongratsHeaderSection {...props} />;
+    case 'congratsHeroSection':
+      return <CongratsHeroSection {...props} />;
+    case 'congratsStepsSection':
+      return <CongratsStepsSection {...props} />;
+    case 'congratsSocialSection':
+      return <CongratsSocialSection {...props} />;
     default:
       return null;
   }
 }
 
 export default function PageBuilder({ page }: PageBuilderProps) {
+  // The congrats page brings its own minimal nav (logo + booked badge), so
+  // the standard header is skipped there.
+  const hasOwnNav = page.sections?.some((s) => s._type === 'congratsHeaderSection');
   return (
     <>
-      <Header />
+      {!hasOwnNav && <Header />}
       <main>
         {page.sections?.map((section) => (
           <div key={section._key}>
