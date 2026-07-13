@@ -55,7 +55,9 @@ export default function TalentSection({ section }: TalentSectionProps) {
       window.clearInterval(timer);
       instance = new Splide(el, {
         type: 'loop',
-        drag: false,
+        // Manually draggable (Figma annotation 5251:15082); auto-scroll
+        // pauses during the drag and resumes after.
+        drag: 'free',
         autoWidth: true,
         pagination: false,
         arrows: false,

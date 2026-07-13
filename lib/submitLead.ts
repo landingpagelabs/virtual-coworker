@@ -6,7 +6,7 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mlgyjjlv';
  * the booking UX must never block on, or break because of, lead capture.
  * keepalive lets the request survive if the visitor navigates away mid-flight.
  */
-export function submitLead(form: HTMLFormElement, source: 'hero' | 'final') {
+export function submitLead(form: HTMLFormElement, source: 'hero' | 'section') {
   try {
     const raw = new FormData(form);
     const data = new FormData();
@@ -16,7 +16,7 @@ export function submitLead(form: HTMLFormElement, source: 'hero' | 'final') {
       data.append(key.replace(/^(hero|final)-/, ''), value);
     });
     const page = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'us';
-    const email = String(raw.get(`${source}-work-email`) ?? '');
+    const email = String(data.get('work-email') ?? '');
     if (email) data.append('_replyto', email);
     data.append('_subject', `New consultation lead (${page})`);
     data.append('form', source);

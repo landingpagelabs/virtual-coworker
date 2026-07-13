@@ -403,7 +403,8 @@ li{text-decoration:none;color:inherit;list-style:none;}
   .talent_list-2{flex-wrap:wrap;}
   .talent-carousel-decor{max-width:35px;}
   .reasons_wrapper{padding:30px 0;}.reasons_cta img{max-width:90px;}.reasons_item{max-width:100%;}
-  .reviews_item:nth-child(n+5){display:none;}.reviews_list.expanded .reviews_item:nth-child(n+5){display:block;}.reviews_item{max-width:100%;}
+  /* Only 3 cards visible on load (Figma annotation 5251:15147) */
+  .reviews_item:nth-child(n+4){display:none;}.reviews_list.expanded .reviews_item:nth-child(n+4){display:block;}.reviews_item{max-width:100%;}
   .item_faq{max-width:100%;}
   .steps_wrapper{padding:30px 0;}
   .steps_list{display:flex;flex-direction:row;flex-wrap:nowrap;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
@@ -416,6 +417,10 @@ li{text-decoration:none;color:inherit;list-style:none;}
   .steps_slider-arrow{display:flex;padding:0;border:none;background:none;line-height:0;cursor:pointer;transition:opacity .3s ease;}
   .steps_slider-arrow:disabled{opacity:0.4;cursor:default;}
   .final_down{flex-direction:column;margin-top:40px;}
+  /* Smaller guarantee crest on mobile (Figma annotation 5251:15290) */
+  .work_logo-wrap{max-width:200px;}
+  /* Tighter gap above the Final CTA heading on mobile (5251:15364) */
+  .final_title-wrap{margin-top:0;}
   .proof-bar_wrapper{flex-wrap:wrap;}.proof-bar_text{text-align:center;}
   .footer_content-wrap{flex-wrap:wrap;gap:25px;}
   .footer_content{gap:20px;max-width:100%;}
@@ -441,11 +446,14 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .modal-small_info{display:flex;flex-direction:column;justify-content:center;gap:15px;}
 
 /* Calendly booking modal (shown on successful consultation-form submit) */
-.calendly-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding:56px 16px 24px;overflow-y:auto;background:rgba(0,0,0,0.60);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
+/* Darker fill per Figma annotation on 5252:18609 */
+.calendly-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding:56px 16px 24px;overflow-y:auto;background:rgba(0,0,0,0.82);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
 .calendly-modal{position:relative;width:100%;max-width:1000px;margin:auto;}
 .calendly-modal-title{margin-bottom:20px;text-align:center;}
 .calendly-embed{min-width:320px;height:700px;border-radius:12px;overflow:hidden;background:transparent;margin-top:-50px;}
 @media(max-width:991px){
+  /* Mobile: tighter top padding + smaller H2-to-embed gap (5252:18609) */
+  .calendly-overlay{padding-top:20px;}
   .calendly-embed{margin-top:0;}
-  .calendly-modal-title{margin-bottom:75px;}
+  .calendly-modal-title{margin-bottom:16px;}
 }

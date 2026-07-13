@@ -1,3 +1,5 @@
+import { DynamicMonth } from '@/components/DynamicMonth';
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -37,7 +39,7 @@ export default function Footer() {
                   <div className="pointer_dote-wrap" />
                   <div className="pointer_text-wrap">
                     <p className="text-label-extra-small is-white">
-                      Limited Spots Available For This Month
+                      Limited Spots Available For <DynamicMonth />
                     </p>
                   </div>
                 </div>
@@ -102,7 +104,7 @@ export default function Footer() {
               <div className="item_footer-down">
                 <div className="item-footer-down_text-wrap">
                   <p className="text-label-extra-small is-white">
-                    <a href="https://virtualcoworker.com/privacy/">Privacy Policy</a>
+                    <a href="https://virtualcoworker.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
                   </p>
                 </div>
               </div>

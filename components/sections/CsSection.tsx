@@ -113,6 +113,9 @@ export default function CsSection({
                           className="cs_list-reviews-cta"
                           onMouseEnter={() => setOpenIndex(i)}
                           onMouseLeave={() => setOpenIndex(null)}
+                          // Tap toggles on touch devices, where hover never
+                          // fires (Figma annotation 5251:14433).
+                          onClick={() => setOpenIndex(openIndex === i ? null : i)}
                         >
                           <p className="text-label-triple-extra-small">Review</p>
                           <div className="cs_list-reviews-cta-icon">

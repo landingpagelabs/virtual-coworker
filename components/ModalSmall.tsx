@@ -4,25 +4,57 @@ import { useEffect, useRef } from 'react';
 
 export function ModalSmall() {
   const modalRef = useRef<HTMLDivElement>(null);
+  const hideTimer = useRef<number | null>(null);
 
   useEffect(() => {
     const modal = modalRef.current;
     if (!modal) return;
 
+    // Shows once, on the FIRST exit intent, then disappears after 15 seconds
+    // (Figma annotation on node 5005:122460).
     let triggered = false;
-    const onMouseMove = (e: MouseEvent) => {
-      // Exit-intent: the cursor heads toward the top of the window.
-      if (!triggered && e.clientY < 50) {
-        modal.classList.add('visible');
-        triggered = true;
-      }
+    const show = () => {
+      if (triggered) return;
+      triggered = true;
+      modal.classList.add('visible');
+      hideTimer.current = window.setTimeout(() => modal.classList.remove('visible'), 15000);
+      cleanup();
     };
 
+    // Desktop exit-intent: the cursor heads toward the top of the window.
+    const onMouseMove = (e: MouseEvent) => {
+      if (e.clientY < 50) show();
+    };
+
+    // Mobile exit-intent: a fast upward scroll (no cursor to track).
+    let lastY = window.scrollY;
+    let lastT = Date.now();
+    const onScroll = () => {
+      const now = Date.now();
+      const dy = window.scrollY - lastY;
+      const dt = now - lastT;
+      // Scrolled up faster than ~1.2px/ms after being at least a viewport deep.
+      if (dy < 0 && dt > 0 && -dy / dt > 1.2 && lastY > window.innerHeight) show();
+      lastY = window.scrollY;
+      lastT = now;
+    };
+
+    const cleanup = () => {
+      document.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('scroll', onScroll);
+    };
     document.addEventListener('mousemove', onMouseMove);
-    return () => document.removeEventListener('mousemove', onMouseMove);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      cleanup();
+      if (hideTimer.current) window.clearTimeout(hideTimer.current);
+    };
   }, []);
 
-  const close = () => modalRef.current?.classList.remove('visible');
+  const close = () => {
+    modalRef.current?.classList.remove('visible');
+    if (hideTimer.current) window.clearTimeout(hideTimer.current);
+  };
 
   return (
     <div className="modal-small" ref={modalRef}>
@@ -41,7 +73,7 @@ export function ModalSmall() {
           </div>
           <h2 className="title-h5 white">At least get some free outsourcing advice</h2>
           <div className="modal-small_cta">
-            <a className="cta-main">
+            <a className="cta-main" href="#consultation" onClick={close}>
               <span className="title-h5 fz-16 bold">Book A Free Consultation</span>
             </a>
           </div>

@@ -41,7 +41,7 @@ export default function FinalSection({ section }: FinalSectionProps) {
     e.preventDefault();
     const isValid = validate(formRef.current);
     if (!isValid) return;
-    submitLead(formRef.current!, 'final');
+    submitLead(formRef.current!, 'section');
     setShowCalendly(true);
   };
 
@@ -191,7 +191,7 @@ export default function FinalSection({ section }: FinalSectionProps) {
                 <img className="final-down_img" src="/images/sections/final/final_2.png" alt="bottom image" />
               </div>
             </div>
-            <CalendlyModal open={showCalendly} onClose={() => setShowCalendly(false)} />
+            <CalendlyModal open={showCalendly} />
           </div>
         </div>
       </div>

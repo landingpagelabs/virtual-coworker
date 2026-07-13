@@ -3,24 +3,28 @@
 import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
-const DEFAULT_CALENDLY_URL = 'https://calendly.com/cheyenne-virtualcoworker/30min';
+// Calendly links per Tyce's Figma embed-code annotations (2026-07-13).
+const DEFAULT_CALENDLY_URL = 'https://calendly.com/cheyenne-virtualcoworker/new-meeting';
 // Per-page Calendly links, keyed by the URL slug.
 const CALENDLY_URL_BY_SLUG: Record<string, string> = {
-  apac: 'https://calendly.com/apac-virtualcoworker/30min',
+  apac: 'https://calendly.com/apac-virtualcoworker/free-30-minute-online-video-consultation-au',
 };
 const CALENDLY_SRC = 'https://assets.calendly.com/assets/external/widget.js';
 
 interface CalendlyModalProps {
   open: boolean;
-  onClose: () => void;
 }
 
 /**
  * Full-screen booking overlay shown after a successful consultation-form submit.
  * Renders through a portal so the fixed overlay isn't trapped by any ancestor's
- * backdrop-filter/transform. Close via backdrop click or Escape.
+ * backdrop-filter/transform.
+ *
+ * Deliberately NOT dismissable (no close button, overlay clicks and Escape do
+ * nothing) — the visitor has just asked for a consultation and this is the
+ * booking step. Spec: Figma annotation on node 5252:18609.
  */
-export function CalendlyModal({ open, onClose }: CalendlyModalProps) {
+export function CalendlyModal({ open }: CalendlyModalProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,32 +57,20 @@ export function CalendlyModal({ open, onClose }: CalendlyModalProps) {
     };
     tryInit();
 
-    // Lock page scroll and allow Escape to close while the modal is open.
+    // Lock page scroll while the modal is open.
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    document.addEventListener('keydown', onKey);
 
     return () => {
       cancelled = true;
       document.body.style.overflow = prevOverflow;
-      document.removeEventListener('keydown', onKey);
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open || typeof document === 'undefined') return null;
 
   return createPortal(
-    <div
-      className="calendly-overlay"
-      role="dialog"
-      aria-modal="true"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
-    >
+    <div className="calendly-overlay" role="dialog" aria-modal="true">
       <div className="calendly-modal">
         <h3 className="title-h3 white calendly-modal-title">
           <u>Last step:</u> select a time for your free consultation

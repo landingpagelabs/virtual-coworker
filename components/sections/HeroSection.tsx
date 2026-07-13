@@ -157,7 +157,7 @@ export default function HeroSection({ section }: HeroSectionProps) {
                 </div>
               </form>
             </div>
-            <CalendlyModal open={showCalendly} onClose={() => setShowCalendly(false)} />
+            <CalendlyModal open={showCalendly} />
           </div>
         </div>
       </div>
