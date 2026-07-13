@@ -24,13 +24,15 @@ export async function POST(request: Request) {
     });
 
     // Ordered exactly as the columns should read, left to right.
+    // Names match Zoho CRM's standard Lead fields (Email, Company, First/Last
+    // Name, Phone, Country) so the Formspree -> Zoho webhook maps 1:1.
     const payload = {
       'Submitted At': submittedAt,
       'First Name': data['first-name'] ?? '',
       'Last Name': data['last-name'] ?? '',
-      'Work Email': data['work-email'] ?? '',
+      Email: data['work-email'] ?? '',
       Phone: data['phone'] ?? '',
-      'Company Name': data['company-name'] ?? '',
+      Company: data['company-name'] ?? '',
       Country: data['country'] ?? '',
       Page: data['page'] ?? '',
       Form: data['form'] ?? '',
@@ -40,10 +42,10 @@ export async function POST(request: Request) {
       'UTM Term': data['utm_term'] ?? '',
       'UTM Content': data['utm_content'] ?? '',
       GCLID: data['gclid'] ?? '',
-      // Formspree specials: control the notification email, not columns.
-      _replyto: data['work-email'] ?? '',
-      _subject: `New consultation lead (${data['page'] || 'us'} · ${data['form'] || 'hero'})`,
     };
+    // No _replyto/_subject: on JSON submissions Formspree renders them as
+    // columns, and they'd be dead keys in the webhook payload going to Zoho.
+    // Reply-to/subject are the CRM's job once the lead lands there.
 
     const res = await fetch(FORMSPREE_ENDPOINT, {
       method: 'POST',
