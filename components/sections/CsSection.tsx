@@ -50,7 +50,14 @@ const Dot = () => (
   </svg>
 );
 
-export default function CsSection({ section }: { section?: { title?: string } }) {
+export default function CsSection({
+  section,
+}: {
+  section?: {
+    title?: string;
+    reviews?: { _key?: string; industry?: string; name?: string; company?: string; quote?: string }[];
+  };
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // Close the open review popover when clicking/tapping anywhere outside of it
@@ -88,14 +95,18 @@ export default function CsSection({ section }: { section?: { title?: string } })
                   <GradientLine id="gl2" />
                 </div>
                 <div className="cs_list-reviews-flex">
-                  {REVIEWS.map((r, i) => (
-                    <div className="cs_list-reviews-item" data-index={i} key={i}>
+                  {REVIEWS.map((r, i) => {
+                    // Text is content-driven; avatars stay hardcoded (the
+                    // content's image refs are dead Sanity references).
+                    const c = section?.reviews?.[i];
+                    return (
+                    <div className="cs_list-reviews-item" data-index={i} key={c?._key ?? i}>
                       <div className="cs_list-reviews-avatar">
                         <img src={r.avatar} alt="" />
                       </div>
                       <div className="cs_list-reviews-info">
                         <div className="cs_list-reviews-name">
-                          <p className="text-label-double-extra-small white">{r.industry}</p>
+                          <p className="text-label-double-extra-small white">{c?.industry ?? r.industry}</p>
                           <VerifiedBadge />
                         </div>
                         <div
@@ -121,15 +132,16 @@ export default function CsSection({ section }: { section?: { title?: string } })
                             <div className="cs_list-reviews-modal-avatar">
                               <img src={r.modalAvatar} alt="" />
                             </div>
-                            <p className="text-label-double-extra-small">{r.name}</p>
+                            <p className="text-label-double-extra-small">{c?.name ?? r.name}</p>
                             <Dot />
-                            <p className="cs_list-reviews-modal-position">{r.company}</p>
+                            <p className="cs_list-reviews-modal-position">{c?.company ?? r.company}</p>
                           </div>
-                          <p className="text-body-caption">{r.quote}</p>
+                          <p className="text-body-caption">{c?.quote ?? r.quote}</p>
                         </div>
                       </div>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 

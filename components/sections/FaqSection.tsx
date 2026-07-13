@@ -3,7 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 interface FaqSectionProps {
-  section: { title?: string };
+  section: {
+    title?: string;
+    faqs?: { _key?: string; question: string; answer: string }[];
+  };
 }
 
 const FAQS = [
@@ -38,6 +41,11 @@ const MinusIcon = () => (
 );
 
 export default function FaqSection({ section }: FaqSectionProps) {
+  // Content-driven with the hardcoded set as fallback, normalised to one shape.
+  const faqs = section.faqs?.length
+    ? section.faqs
+    : FAQS.map((f) => ({ _key: undefined, question: f.q, answer: f.a }));
+
   // Multi-open accordion: the first three items start expanded.
   const [openIndexes, setOpenIndexes] = useState<Set<number>>(() => new Set([0, 1, 2]));
   const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -72,12 +80,12 @@ export default function FaqSection({ section }: FaqSectionProps) {
             </div>
 
             <div className="faq_list">
-              {FAQS.map((item, i) => (
-                <div className={`item_faq${openIndexes.has(i) ? ' active' : ''}`} key={i}>
+              {faqs.map((item, i) => (
+                <div className={`item_faq${openIndexes.has(i) ? ' active' : ''}`} key={item._key ?? i}>
                   <div className="item-faq_head">
                     <div className="item-faq-head_content" onClick={() => toggle(i)}>
                       <div className="item-faq-head_title-wrap">
-                        <p className="text-label-small">{item.q}</p>
+                        <p className="text-label-small">{item.question}</p>
                       </div>
                       <div className="item-faq-head_icon-wrap">
                         <PlusIcon />
@@ -94,7 +102,7 @@ export default function FaqSection({ section }: FaqSectionProps) {
                     }}
                   >
                     <div className="item-faq-panel_text-wrap">
-                      <p className="text-body-regular is-gray">{item.a}</p>
+                      <p className="text-body-regular is-gray">{item.answer}</p>
                     </div>
                   </div>
                 </div>

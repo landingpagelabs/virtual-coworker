@@ -3,7 +3,10 @@
 import { useState, useEffect, useRef } from 'react';
 
 interface ReviewsSectionProps {
-  section: { title?: string };
+  section: {
+    title?: string;
+    reviews?: { _key?: string; name?: string; role?: string; quote?: string }[];
+  };
 }
 
 const REVIEWS = [
@@ -151,26 +154,32 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
 
             <div ref={gridRef} className={`reviews_list${expanded ? ' expanded' : ''}`}>
               <div className={`reasons_decor${expanded ? ' active' : ''}`} />
-              {REVIEWS.map((r, i) => (
-                <div className="reviews_item" key={i}>
-                  <div className="reviews_item-head">
-                    <FiveStars />
-                    <VerifiedBadge />
-                  </div>
-                  <div className="reviews_item-content">
-                    <p className="text-body-regular">{r.quote}</p>
-                  </div>
-                  <div className="reviews_avatar-info">
-                    <div className="reviews_avatar">
-                      <img src={`/images/sections/reviews/${r.img}.png`} alt={r.name} />
+              {REVIEWS.map((r, i) => {
+                // Text is content-driven; avatars stay welded to their index
+                // (the img filenames aren't derivable from the content).
+                const c = section.reviews?.[i];
+                const name = c?.name ?? r.name;
+                return (
+                  <div className="reviews_item" key={c?._key ?? i}>
+                    <div className="reviews_item-head">
+                      <FiveStars />
+                      <VerifiedBadge />
                     </div>
-                    <div className="reviews_info">
-                      <p className="text-label-extra-small">{r.name}</p>
-                      <p className="text-body-small">{r.role}</p>
+                    <div className="reviews_item-content">
+                      <p className="text-body-regular">{c?.quote ?? r.quote}</p>
+                    </div>
+                    <div className="reviews_avatar-info">
+                      <div className="reviews_avatar">
+                        <img src={`/images/sections/reviews/${r.img}.png`} alt={name} />
+                      </div>
+                      <div className="reviews_info">
+                        <p className="text-label-extra-small">{name}</p>
+                        <p className="text-body-small">{c?.role ?? r.role}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="reasons_cta" id="reviews-cta" onClick={handleToggle}>

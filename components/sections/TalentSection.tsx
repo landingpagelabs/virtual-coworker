@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 interface TalentSectionProps {
   section: {
     title?: string;
+    ctaQuote?: string;
+    ctaAuthor?: string;
   };
 }
 
@@ -136,11 +138,13 @@ export default function TalentSection({ section }: TalentSectionProps) {
                 <div className="work-qoute_right">
                   <div className="work-qoute-right_text-wrap">
                     <p className="text-body-small white">
-                      “Our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost”
+                      {/* Content value carries its own curly quote marks. */}
+                      {section.ctaQuote ||
+                        '“Our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost”'}
                     </p>
                   </div>
                   <div className="work-qoute-right_name-wrap">
-                    <p className="text-label-double-extra-small is-gray">Dave · B2B SaaS founder</p>
+                    <p className="text-label-double-extra-small is-gray">{section.ctaAuthor || 'Dave · B2B SaaS founder'}</p>
                   </div>
                 </div>
               </div>

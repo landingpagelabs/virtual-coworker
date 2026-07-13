@@ -3,7 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 interface StepsSectionProps {
-  section: { title?: string };
+  section: {
+    title?: string;
+    steps?: { _key?: string; strapline?: string; title?: string; text?: string }[];
+  };
 }
 
 const STEPS = [
@@ -97,24 +100,28 @@ export default function StepsSection({ section }: StepsSectionProps) {
               </div>
             </div>
             <div className="steps_list" ref={trackRef}>
-              {STEPS.map((s) => (
-                <div className="item_steps" key={s.strapline}>
-                  <div className="item-steps_head">
-                    <div className="item-steps_strapline-wrap">
-                      <p className="item-steps-strapline_text">{s.strapline}</p>
+              {STEPS.map((s, i) => {
+                // Text is content-driven; the step art stays welded to its index.
+                const c = section.steps?.[i];
+                return (
+                  <div className="item_steps" key={c?._key ?? s.strapline}>
+                    <div className="item-steps_head">
+                      <div className="item-steps_strapline-wrap">
+                        <p className="item-steps-strapline_text">{c?.strapline ?? s.strapline}</p>
+                      </div>
+                      <div className="item-steps_title-wrap">
+                        <h3 className="item-steps_title">{c?.title ?? s.title}</h3>
+                      </div>
+                      <div className="item-steps_text-wrap">
+                        <p className="text-body-regular is-white">{c?.text ?? s.text}</p>
+                      </div>
                     </div>
-                    <div className="item-steps_title-wrap">
-                      <h3 className="item-steps_title">{s.title}</h3>
-                    </div>
-                    <div className="item-steps_text-wrap">
-                      <p className="text-body-regular is-white">{s.text}</p>
+                    <div className="item-steps_down">
+                      <img className="item-steps-down_img" src={s.img} alt="steps image" />
                     </div>
                   </div>
-                  <div className="item-steps_down">
-                    <img className="item-steps-down_img" src={s.img} alt="steps image" />
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Slider controls — shown only on mobile (see globals.css). */}

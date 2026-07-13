@@ -1,6 +1,8 @@
 interface ShowcaseSectionProps {
   section: {
     title?: string;
+    bottomText?: string;
+    items?: { _key?: string; problem?: string; solution?: string }[];
   };
 }
 
@@ -76,23 +78,28 @@ export default function ShowcaseSection({ section }: ShowcaseSectionProps) {
               </div>
             </div>
             <div className="showcase_list">
-              {ITEMS.map((item, i) => (
-                <div className="item_showcase" key={i}>
-                  <div className="item-showcase_left">
-                    <div className="item-showcase-left_icon-wrap">{item.icon}</div>
-                    <div className="item-showcase-left_text-wrap">
-                      <p className="text-label-medium is-white">{item.problem}</p>
+              {ITEMS.map((item, i) => {
+                // Text is content-driven; the inline SVG icons stay welded to
+                // their index (the content carries no icon data).
+                const c = section.items?.[i];
+                return (
+                  <div className="item_showcase" key={c?._key ?? i}>
+                    <div className="item-showcase_left">
+                      <div className="item-showcase-left_icon-wrap">{item.icon}</div>
+                      <div className="item-showcase-left_text-wrap">
+                        <p className="text-label-medium is-white">{c?.problem ?? item.problem}</p>
+                      </div>
+                    </div>
+                    <div className="item-showcase_line" />
+                    <div className="item-showcase_right">
+                      <p className="text-body-small is-offwhite">{c?.solution ?? item.solution}</p>
                     </div>
                   </div>
-                  <div className="item-showcase_line" />
-                  <div className="item-showcase_right">
-                    <p className="text-body-small is-offwhite">{item.solution}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             <div className="showcase_bottom">
-              <p className="text-label-large is-offwhite">Plus, much, much more!</p>
+              <p className="text-label-large is-offwhite">{section.bottomText || 'Plus, much, much more!'}</p>
             </div>
           </div>
         </div>

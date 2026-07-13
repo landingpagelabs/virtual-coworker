@@ -3,7 +3,10 @@
 import { useState } from 'react';
 
 interface ReasonsSectionProps {
-  section: { title?: string };
+  section: {
+    title?: string;
+    reasons?: { _key?: string; title?: string; text?: string }[];
+  };
 }
 
 const REASONS = [
@@ -35,17 +38,21 @@ export default function ReasonsSection({ section }: ReasonsSectionProps) {
 
             <div className={`reasons_list${expanded ? ' expanded' : ''}`}>
               <div className={`reasons_decor${expanded ? ' active' : ''}`} />
-              {REASONS.map((r, i) => (
-                <div className="reasons_item" key={i}>
-                  <div className="reasons_item-image">
-                    <img src={`/images/sections/reasons/${r.img}.png`} alt="" />
+              {REASONS.map((r, i) => {
+                // Text is content-driven; the card art stays welded to its index.
+                const c = section.reasons?.[i];
+                return (
+                  <div className="reasons_item" key={c?._key ?? i}>
+                    <div className="reasons_item-image">
+                      <img src={`/images/sections/reasons/${r.img}.png`} alt="" />
+                    </div>
+                    <div className="reasons_info">
+                      <p className="text-label-large white">{c?.title ?? r.title}</p>
+                      <p className="text-body-small white">{c?.text ?? r.text}</p>
+                    </div>
                   </div>
-                  <div className="reasons_info">
-                    <p className="text-label-large white">{r.title}</p>
-                    <p className="text-body-small white">{r.text}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="reasons_cta" id="reasons-cta" onClick={() => setExpanded(!expanded)}>
