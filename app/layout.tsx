@@ -68,11 +68,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
           defer
         />
-        <script
-          src="https://cdn.cantclone.com/cantclone.js"
-          data-key="79529ca0889e4fe999fc25027293b992"
-          defer
-        />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
