@@ -105,7 +105,7 @@ export default function AboutSection({ section }: AboutSectionProps) {
               </p>
               <div className="work_qoute-wrap">
                 <div className="work-qoute_image-2">
-                  <img className="work-qoute_img" src="/images/sections/reviews/123.png" alt="" />
+                  <img className="work-qoute_img" src="/images/sections/reviews/123.avif" alt="" />
                 </div>
                 <div className="work-qoute_right">
                   <p className="text-body-regular is-white">

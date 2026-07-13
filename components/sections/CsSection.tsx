@@ -12,14 +12,14 @@ interface Review {
 }
 
 const REVIEWS: Review[] = [
-  { industry: 'Construction', avatar: '/images/sections/cs/Frame 2087327516.png', modalAvatar: '/images/sections/cs/Frame 2087327516.png', name: 'Douglas', company: 'Ace Accounting', quote: 'When I had a question early on, someone called me back the same day. That kind of accountability is rare at this price point.' },
-  { industry: 'Recruitment', avatar: '/images/sections/cs/item-2.png', modalAvatar: '/images/sections/cs/item-2.png', name: 'Paul Slezak', company: 'Cofounder, RecruitLoop', quote: 'Virtual Coworker provided us with high-quality profiles, worked with us around our own screening/recruitment processes, and provided great talent.' },
-  { industry: 'HR Industry', avatar: '/images/sections/cs/item-3.png', modalAvatar: '/images/sections/cs/item-3.png', name: 'Leonie', company: 'Director, HR Industry', quote: 'To be able to zero in on a suitable person with the skills that we required from Day One has been amazing.' },
-  { industry: 'SaaS', avatar: '/images/sections/cs/item-4.png', modalAvatar: '/images/sections/cs/dave-popover.png', name: 'Dave', company: 'B2B SaaS founder', quote: 'Our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost.' },
-  { industry: 'Accounting', avatar: '/images/sections/cs/item-5.png', modalAvatar: '/images/sections/cs/item-5.png', name: 'Elyse Campbell', company: 'Ace Accounting', quote: 'Partnering with Virtual Coworker to hire a full-time remote accountant has been a game-changer for our firm.' },
-  { industry: 'Marine', avatar: '/images/sections/cs/item-6.png', modalAvatar: '/images/sections/cs/item-6.png', name: 'Rebecca Jones', company: 'Director, Yacht and Boat', quote: 'After interviewing several candidates via email and phone, we felt confident that our new coworker would fit in well with our dynamic business.' },
-  { industry: 'E-commerce', avatar: '/images/sections/cs/item-7.png', modalAvatar: '/images/sections/cs/avatar -1.png', name: 'Lexi', company: 'E-commerce website owner', quote: 'As a small company, we really couldn\'t afford a call center, but by outsourcing this to the Philippines, we have been able to provide much better customer service for our customers.' },
-  { industry: 'Agency', avatar: '/images/sections/cs/last.png', modalAvatar: '/images/sections/cs/avatar.png', name: 'Matthew', company: 'Marketing agency owner', quote: 'Six months in, our senior team is back to doing strategy and client work and our margins look better for it.' },
+  { industry: 'Construction', avatar: '/images/sections/cs/Frame 2087327516.avif', modalAvatar: '/images/sections/cs/Frame 2087327516.avif', name: 'Douglas', company: 'Ace Accounting', quote: 'When I had a question early on, someone called me back the same day. That kind of accountability is rare at this price point.' },
+  { industry: 'Recruitment', avatar: '/images/sections/cs/item-2.avif', modalAvatar: '/images/sections/cs/item-2.avif', name: 'Paul Slezak', company: 'Cofounder, RecruitLoop', quote: 'Virtual Coworker provided us with high-quality profiles, worked with us around our own screening/recruitment processes, and provided great talent.' },
+  { industry: 'HR Industry', avatar: '/images/sections/cs/item-3.avif', modalAvatar: '/images/sections/cs/item-3.avif', name: 'Leonie', company: 'Director, HR Industry', quote: 'To be able to zero in on a suitable person with the skills that we required from Day One has been amazing.' },
+  { industry: 'SaaS', avatar: '/images/sections/cs/item-4.avif', modalAvatar: '/images/sections/cs/dave-popover.avif', name: 'Dave', company: 'B2B SaaS founder', quote: 'Our SDR booked 14 qualified meetings in the first quarter at a fraction of what a US-based hire would have cost.' },
+  { industry: 'Accounting', avatar: '/images/sections/cs/item-5.avif', modalAvatar: '/images/sections/cs/item-5.avif', name: 'Elyse Campbell', company: 'Ace Accounting', quote: 'Partnering with Virtual Coworker to hire a full-time remote accountant has been a game-changer for our firm.' },
+  { industry: 'Marine', avatar: '/images/sections/cs/item-6.avif', modalAvatar: '/images/sections/cs/item-6.avif', name: 'Rebecca Jones', company: 'Director, Yacht and Boat', quote: 'After interviewing several candidates via email and phone, we felt confident that our new coworker would fit in well with our dynamic business.' },
+  { industry: 'E-commerce', avatar: '/images/sections/cs/item-7.avif', modalAvatar: '/images/sections/cs/avatar -1.avif', name: 'Lexi', company: 'E-commerce website owner', quote: 'As a small company, we really couldn\'t afford a call center, but by outsourcing this to the Philippines, we have been able to provide much better customer service for our customers.' },
+  { industry: 'Agency', avatar: '/images/sections/cs/last.avif', modalAvatar: '/images/sections/cs/avatar.avif', name: 'Matthew', company: 'Marketing agency owner', quote: 'Six months in, our senior team is back to doing strategy and client work and our margins look better for it.' },
 ];
 
 const GradientLine = ({ id }: { id: string }) => (
@@ -171,17 +171,17 @@ export default function CsSection({
                   <GradientLine id="gl4" />
                 </div>
                 <div className="cs_list-awards-flex">
-                  <div className="cs_list-awards-item item-1"><img src="/images/sections/cs/founded.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-2"><img src="/images/sections/cs/Avatar Card.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-3"><img src="/images/sections/cs/forbes-business-council 2.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-4"><img src="/images/sections/cs/Avatar Card (1).png" alt="" /></div>
-                  <div className="cs_list-awards-item item-5"><img src="/images/sections/cs/Badges.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-6"><img src="/images/sections/cs/Clutch Badge.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-7"><img src="/images/sections/cs/brw 1.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-8"><img src="/images/sections/cs/startup 1.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-9"><img src="/images/sections/cs/Figure 1.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-10"><img src="/images/sections/cs/Sydney_Morning_Herald_logo 1.png" alt="" /></div>
-                  <div className="cs_list-awards-item item-11"><img src="/images/sections/cs/startupsmart_restored 1.png" alt="" /></div>
+                  <div className="cs_list-awards-item item-1"><img src="/images/sections/cs/founded.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-2"><img src="/images/sections/cs/Avatar Card.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-3"><img src="/images/sections/cs/forbes-business-council 2.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-4"><img src="/images/sections/cs/Avatar Card (1).avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-5"><img src="/images/sections/cs/Badges.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-6"><img src="/images/sections/cs/Clutch Badge.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-7"><img src="/images/sections/cs/brw 1.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-8"><img src="/images/sections/cs/startup 1.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-9"><img src="/images/sections/cs/Figure 1.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-10"><img src="/images/sections/cs/Sydney_Morning_Herald_logo 1.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-11"><img src="/images/sections/cs/startupsmart_restored 1.avif" alt="" /></div>
                 </div>
               </div>
             </div>

@@ -96,7 +96,7 @@ export default function TalentSection({ section }: TalentSectionProps) {
                   <div className="talent-list splide__list">
                     {TALENT.map((t) => (
                       <div className="talent-item splide__slide" key={t.img}>
-                        <img className="talent-item_img" src={`/images/sections/talent/${t.img}.png`} alt={t.name} />
+                        <img className="talent-item_img" src={`/images/sections/talent/${t.img}.avif`} alt={t.name} />
                         <div className="talent-item_content">
                           <p className="text-label-extra-small white">{t.name}</p>
                           <p className="text-body-small white">{t.role}</p>
@@ -135,7 +135,7 @@ export default function TalentSection({ section }: TalentSectionProps) {
               </div>
               <div className="work_qoute-wrap">
                 <div className="work-qoute_image-2">
-                  <img className="work-qoute_img" src="/images/sections/reviews/Frame 2147227455.png" alt="qoute image" />
+                  <img className="work-qoute_img" src="/images/sections/reviews/Frame 2147227455.avif" alt="qoute image" />
                 </div>
                 <div className="work-qoute_right">
                   <div className="work-qoute-right_text-wrap">

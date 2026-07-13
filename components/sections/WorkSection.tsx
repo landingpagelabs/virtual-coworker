@@ -20,7 +20,7 @@ export default function WorkSection({ section }: WorkSectionProps) {
           <div className="work_wrapper">
             <div className="work_head">
               <div className="work_logo-wrap">
-                <img className="work_logo" src="/images/sections/work/work_crest.png" alt="" />
+                <img className="work_logo" src="/images/sections/work/work_crest.avif" alt="" />
               </div>
               <div className="work_title-wrap">
                 <h2 className="title-h2 is-white">
@@ -43,7 +43,7 @@ export default function WorkSection({ section }: WorkSectionProps) {
               </a>
               <div className="work_qoute-wrap">
                 <div className="work-qoute_image-2">
-                  <img className="work-qoute_img" src="/images/sections/work/work_image_people.png" alt="" />
+                  <img className="work-qoute_img" src="/images/sections/work/work_image_people.avif" alt="" />
                 </div>
                 <div className="work-qoute_right">
                   <p className="text-body-regular is-white">

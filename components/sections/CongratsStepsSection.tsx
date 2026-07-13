@@ -22,14 +22,14 @@ interface CongratsStepsSectionProps {
 const InviteMockup = () => (
   <div className="congrats-invite">
     <div className="congrats-invite_sender">
-      <img className="congrats-invite_avatar" src="/images/sections/congrats/invite-avatar.png" alt="" />
+      <img className="congrats-invite_avatar" src="/images/sections/congrats/invite-avatar.avif" alt="" />
       <div>
         <p className="congrats-invite_sender-name">Virtual Coworker</p>
         <p className="congrats-invite_sender-tome">to me ▾</p>
       </div>
     </div>
     <div className="congrats-invite_card">
-      <img className="congrats-invite_date" src="/images/sections/congrats/invite-date-tile.png" alt="" />
+      <img className="congrats-invite_date" src="/images/sections/congrats/invite-date-tile.avif" alt="" />
       <div className="congrats-invite_details">
         <p className="congrats-invite_title">Invitation from Virtual Coworker</p>
         <p className="congrats-invite_link">View on Calendar</p>

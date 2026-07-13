@@ -53,23 +53,23 @@ export default function CapabilitiesSection({ section }: CapabilitiesSectionProp
 
             <div className="capabilities_bottom">
               <div className="capabilities_left">
-                <img className="capabilities-left_img" src="/images/sections/reviews/12345.png" alt="capabilities left image" />
+                <img className="capabilities-left_img" src="/images/sections/reviews/12345.avif" alt="capabilities left image" />
               </div>
               <div className="capabilities_right">
                 <div className="capabilities-right_top">
                   <div className="capabilities-right-top_head">
                     <div className="capabilities-right-top-head_image">
-                      <img className="capabilities-right-top-head_img" src="/images/sections/capabilities/capabilities_switch.png" alt="" />
+                      <img className="capabilities-right-top-head_img" src="/images/sections/capabilities/capabilities_switch.avif" alt="" />
                     </div>
                     <div className="capabilities-right-top-head_text-wrap">
                       <p className="text-label-extra-small is-white">Have Your Next Great Hire In Days</p>
                     </div>
                   </div>
                   <div className="capabilities-right-top_people-wrap">
-                    <img className="capabilities-right-top-people_img" src="/images/sections/capabilities/capabilities_line.png" alt="" />
+                    <img className="capabilities-right-top-people_img" src="/images/sections/capabilities/capabilities_line.avif" alt="" />
                   </div>
                   <div className="capabilities-right-top_review-wrap">
-                    <img className="capabilities-right-top-review_img" src="/images/sections/capabilities/capabilities_review.png" alt="" />
+                    <img className="capabilities-right-top-review_img" src="/images/sections/capabilities/capabilities_review.avif" alt="" />
                   </div>
                 </div>
                 <div className="capabilities-right_bottom">

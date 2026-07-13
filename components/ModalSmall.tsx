@@ -65,11 +65,11 @@ export function ModalSmall() {
           </svg>
         </div>
         <div className="modal-small_image">
-          <img src="/images/header/img-modal.png" alt="Virtual Coworker team — Top Virtual Assistant Company (Clutch)" />
+          <img src="/images/header/img-modal.avif" alt="Virtual Coworker team — Top Virtual Assistant Company (Clutch)" />
         </div>
         <div className="modal-small_info">
           <div className="modal-small_logo">
-            <img src="/images/header/Client Logo.png" alt="" />
+            <img src="/images/header/Client Logo.avif" alt="" />
           </div>
           <h2 className="title-h5 white">At least get some free outsourcing advice</h2>
           <div className="modal-small_cta">

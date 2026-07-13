@@ -44,7 +44,7 @@ export default function ReasonsSection({ section }: ReasonsSectionProps) {
                 return (
                   <div className="reasons_item" key={c?._key ?? i}>
                     <div className="reasons_item-image">
-                      <img src={`/images/sections/reasons/${r.img}.png`} alt="" />
+                      <img src={`/images/sections/reasons/${r.img}.avif`} alt="" />
                     </div>
                     <div className="reasons_info">
                       <p className="text-label-large white">{c?.title ?? r.title}</p>
@@ -56,7 +56,7 @@ export default function ReasonsSection({ section }: ReasonsSectionProps) {
             </div>
 
             <div className="reasons_cta" id="reasons-cta" onClick={() => setExpanded(!expanded)}>
-              <img src="/images/sections/reasons/img.png" alt="" />
+              <img src="/images/sections/reasons/img.avif" alt="" />
               <p className="text-body-regular white mobile-d-none">Multi-Award Winning &amp; Top-Rated By Growing Businesses</p>
               <svg width="1" height="18" viewBox="0 0 1 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0.5" y1="18" x2="0.5" stroke="white" strokeOpacity="0.3" />

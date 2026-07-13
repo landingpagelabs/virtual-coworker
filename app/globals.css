@@ -118,7 +118,7 @@ li{text-decoration:none;color:inherit;list-style:none;}
 /* ======================================================
    HERO
    ====================================================== */
-.hero{padding-top:100px;width:100%;background-image:url('/images/sections/hero/Hero.png');background-position:center;background-repeat:no-repeat;background-size:cover;}
+.hero{padding-top:100px;width:100%;background-image:url('/images/sections/hero/Hero.avif');background-position:center;background-repeat:no-repeat;background-size:cover;}
 .hero_wrapper{padding-bottom:0;}
 .hero_title-wrap{width:100%;max-width:898px;margin:0 auto;text-align:center;margin-bottom:15px;}
 .hero_subtitle-wrap{width:100%;max-width:714px;margin:0 auto;text-align:center;margin-bottom:25px;}
@@ -282,7 +282,7 @@ li{text-decoration:none;color:inherit;list-style:none;}
 /* ======================================================
    WORK (GUARANTEE)
    ====================================================== */
-.work{background-image:url('/images/sections/work/How It Works.png');background-size:cover;background-repeat:no-repeat;}
+.work{background-image:url('/images/sections/work/How It Works.avif');background-size:cover;background-repeat:no-repeat;}
 .work_wrapper{padding-block:40px;}
 .work_head{display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;max-width:714px;margin:0 auto;}
 .work_logo-wrap{width:100%;max-width:270px;margin-bottom:30px;}
@@ -375,7 +375,15 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .footer-content_list{display:flex;flex-direction:row;gap:14px;flex-wrap:wrap;align-items:center;}
 .footer-content_list.is-text{display:flex;flex-direction:column;gap:20px;flex-wrap:wrap;align-items:start;}
 .item_footer-content{width:51px;height:51px;}
+/* Feature logos were SVGs with small intrinsic sizes; the AVIF replacements
+   are 420px sources, so pin each to its original rendered width. */
 .item_footer-content-second{}
+.item_footer-content-second:nth-child(1) img{width:48px;}
+.item_footer-content-second:nth-child(2) img{width:88px;}
+.item_footer-content-second:nth-child(3) img{width:51px;}
+.item_footer-content-second:nth-child(4) img{width:69px;}
+.item_footer-content-second:nth-child(5) img{width:132px;}
+.item-footer-down_image img{width:26px;}
 .footer_down{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin-top:40px;gap:20px;}
 .item_footer-down{display:flex;flex-direction:row;gap:8px;align-items:center;}
 
@@ -435,7 +443,7 @@ li{text-decoration:none;color:inherit;list-style:none;}
 /* ======================================================
    EXIT-INTENT MODAL (small)
    ====================================================== */
-.modal-small{width:100%;max-width:480px;position:fixed;bottom:1%;left:1%;background:url('/images/header/123.png');background-repeat:no-repeat;background-position:center;background-size:cover;padding:13px;border-radius:15px;transition:all .4s ease 0s;opacity:0;visibility:hidden;z-index:50;}
+.modal-small{width:100%;max-width:480px;position:fixed;bottom:1%;left:1%;background:url('/images/header/123.avif');background-repeat:no-repeat;background-position:center;background-size:cover;padding:13px;border-radius:15px;transition:all .4s ease 0s;opacity:0;visibility:hidden;z-index:50;}
 .modal-small.visible{opacity:1;visibility:visible;}
 .modal-small-wrapper{display:flex;gap:15px;}
 .modal-small-exit{position:absolute;top:10px;right:10px;cursor:pointer;transition:all .4s ease 0s;}

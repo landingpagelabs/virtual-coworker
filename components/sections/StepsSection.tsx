@@ -14,19 +14,19 @@ const STEPS = [
     strapline: 'Step 1',
     title: 'Get free advice from an outsourcing expert',
     text: 'Book a quick and free consultation with our outsourcing specialist. We’ll explain how it works, pricing and answer all your questions.',
-    img: '/images/sections/steps/steps_1.png',
+    img: '/images/sections/steps/steps_1.avif',
   },
   {
     strapline: 'Step 2',
     title: 'Receive your hand-picked shortlist',
     text: 'If it’s a fit, we start recruiting, and give you a shortlist of pre-vetted candidates within days. You interview them and select your favorite.',
-    img: '/images/sections/steps/steps_2.png',
+    img: '/images/sections/steps/steps_2.avif',
   },
   {
     strapline: 'Step 3',
     title: 'Grow past the bottleneck',
     text: 'Finally, the work that’s been piling up gets done. Support tickets get answered faster, more calls get booked on the calendar and you hit your next revenue milestone.',
-    img: '/images/sections/steps/steps_3.png',
+    img: '/images/sections/steps/steps_3.avif',
   },
 ];
 

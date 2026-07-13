@@ -35,7 +35,7 @@ export default function ProofBarSection({ section }: ProofBarSectionProps) {
             </div>
             <div className="proof-bar_right">
               <div className="proof-bar_image-first">
-                <img className="proof-bar_img-first" src="/images/sections/proof-bar/proof-bar-stack.png" alt="proof bar people" />
+                <img className="proof-bar_img-first" src="/images/sections/proof-bar/proof-bar-stack.avif" alt="proof bar people" />
               </div>
               <div className="proof-bar_image-second">
                 <img className="proof-bar_img-second" src="/images/sections/proof-bar/proof-bar-rating.png" alt="proof bar stars" />

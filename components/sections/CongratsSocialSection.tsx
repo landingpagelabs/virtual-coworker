@@ -24,12 +24,12 @@ export default function CongratsSocialSection({ section }: CongratsSocialSection
             <div className="congrats-social_braden">
               <img
                 className="congrats-social_signature"
-                src="/images/sections/congrats/congrats-signature.png"
+                src="/images/sections/congrats/congrats-signature.avif"
                 alt="Braden Yuill signature"
               />
               <img
                 className="congrats-social_avatar"
-                src="/images/sections/congrats/congrats-braden.png"
+                src="/images/sections/congrats/congrats-braden.avif"
                 alt="Braden Yuill"
               />
               <div className="congrats-social_who">
@@ -54,7 +54,7 @@ export default function CongratsSocialSection({ section }: CongratsSocialSection
             <p className="congrats-social_awards-label">Awards &amp; Features</p>
             <img
               className="congrats-social_awards"
-              src="/images/sections/congrats/congrats-awards.png"
+              src="/images/sections/congrats/congrats-awards.avif"
               alt="Awards and features: Google 5-star reviews, Forbes, Clutch, Trustpilot, BRW, Startup Smart, Startup Daily, The Sydney Morning Herald"
             />
           </div>

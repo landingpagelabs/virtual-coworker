@@ -54,7 +54,7 @@ export default function Footer() {
                 <div className="footer-content_list">
                   {[1, 2, 3, 4, 5, 6].map((n) => (
                     <a key={n} href="#" className="item_footer-content">
-                      <img className="item-footer-content_img" src={`/images/footer/award_${n}.png`} alt={`Award ${n}`} />
+                      <img className="item-footer-content_img" src={`/images/footer/award_${n}.avif`} alt={`Award ${n}`} />
                     </a>
                   ))}
                 </div>
@@ -67,7 +67,7 @@ export default function Footer() {
                 <div className="footer-content_list">
                   {[1, 2, 3, 4, 5].map((n) => (
                     <a key={n} href="#" className="item_footer-content-second">
-                      <img src={`/images/footer/secong_logo_${n}.svg`} alt={`Feature logo ${n}`} />
+                      <img src={`/images/footer/secong_logo_${n}.avif`} alt={`Feature logo ${n}`} />
                     </a>
                   ))}
                 </div>
@@ -95,7 +95,7 @@ export default function Footer() {
             <div className="footer_down">
               <div className="item_footer-down">
                 <div className="item-footer-down_image">
-                  <img src="/images/footer/footer_bottom-icon.svg" alt="" />
+                  <img src="/images/footer/footer_bottom-icon.avif" alt="" />
                 </div>
                 <div className="item-footer-down_text-wrap">
                   <p className="text-label-extra-small is-white">Built By Landing Page Labs</p>

@@ -170,7 +170,7 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
                     </div>
                     <div className="reviews_avatar-info">
                       <div className="reviews_avatar">
-                        <img src={`/images/sections/reviews/${r.img}.png`} alt={name} />
+                        <img src={`/images/sections/reviews/${r.img}.avif`} alt={name} />
                       </div>
                       <div className="reviews_info">
                         <p className="text-label-extra-small">{name}</p>
@@ -183,7 +183,7 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
             </div>
 
             <div className="reasons_cta" id="reviews-cta" onClick={handleToggle}>
-              <img className="reasons_cta-image" src="/images/sections/reviews/zxc.png" alt="" />
+              <img className="reasons_cta-image" src="/images/sections/reviews/zxc.avif" alt="" />
               <p className="text-body-regular white ls-2 mobile-d-none">400+ Businesses Proudly Matched With Expert VAs</p>
               <svg width="1" height="18" viewBox="0 0 1 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0.5" y1="18" x2="0.5" stroke="white" strokeOpacity="0.3" />
