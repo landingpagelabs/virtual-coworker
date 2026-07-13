@@ -1,15 +1,12 @@
 import type { MetadataRoute } from 'next';
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://try.virtualcoworker.com';
-
+// Paid-traffic landing pages — keep the whole site out of the index
+// (Tyce, 2026-07-13). No sitemap: publishing one would invite crawling.
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      allow: ['/us', '/apac'],
-      // Post-booking page — no reason for it to be indexed.
-      disallow: ['/congrats'],
+      disallow: '/',
     },
-    sitemap: `${SITE}/sitemap.xml`,
   };
 }

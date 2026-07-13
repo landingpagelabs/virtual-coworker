@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  // These are paid-traffic landing pages: nothing here should be indexed
+  // (Tyce, 2026-07-13). Link previews still work — og/twitter tags are
+  // unaffected by robots directives.
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: { index: false, follow: false },
+  },
   icons: {
     icon: { url: '/images/header/Tab=Default.png', type: 'image/png' },
   },

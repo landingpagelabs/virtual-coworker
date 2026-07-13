@@ -10,10 +10,10 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  // noindex is set sitewide in the root layout — every page here is a
+  // paid-traffic destination, not organic search real estate.
   return {
     alternates: { canonical: `/${params.slug}` },
-    // The post-booking page shouldn't be indexed or shown in ads.
-    robots: params.slug === 'congrats' ? { index: false, follow: false } : undefined,
   };
 }
 
