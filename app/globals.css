@@ -469,32 +469,35 @@ li{text-decoration:none;color:inherit;list-style:none;}
    ====================================================== */
 .congrats-nav,.congrats-hero,.congrats-steps,.congrats-social{font-family:'Inter',sans-serif;}
 .congrats-nav{background:#fff;border-bottom:1px solid rgba(26,26,26,0.08);}
-.congrats-nav_wrapper{display:flex;align-items:center;justify-content:center;gap:24px;padding:15px 0;}
+.congrats-nav_wrapper{display:flex;align-items:center;justify-content:center;gap:20px;padding:20px 0 22px;}
 .congrats-nav_logo{width:105px;height:35px;}
-.congrats-nav_badge{display:flex;align-items:center;gap:7px;padding:8px 14px;background:#fff;border:1px solid rgba(26,26,26,0.15);border-radius:8px;font-size:12.5px;font-weight:700;letter-spacing:0.4px;color:#41424d;}
+.congrats-nav_badge{display:flex;align-items:center;gap:5px;padding:8px;background:#fff;border-radius:6px;box-shadow:0 0 0 1.2px rgba(61,61,61,0.12),inset 0 0.9px 0.9px rgba(255,255,255,0.64);font-size:12px;font-weight:700;line-height:1.5;color:#707070;}
 
 .congrats-hero{position:relative;background:#fff;}
 .congrats-confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:900;}
-.congrats-hero_wrapper{display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 0 40px;}
-.congrats-hero_eyebrow{display:flex;align-items:center;gap:10px;padding:6px 16px 6px 6px;background:#fff;border-radius:100px;box-shadow:0 2px 12px rgba(26,26,26,0.10);margin-bottom:34px;}
-.congrats-hero_eyebrow-badge{padding:4px 10px;background:#0d7f42;border-radius:6px;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:0.5px;}
-.congrats-hero_eyebrow-text{color:#1a1a1a;font-size:15px;}
-.congrats-hero_title{max-width:900px;color:#1a1a1a;font-size:54px;font-weight:600;line-height:1.15;letter-spacing:-0.02em;margin-bottom:28px;}
-.congrats-hero_subtitle{max-width:640px;color:#41424d;font-size:17px;line-height:1.5;margin-bottom:40px;}
-.congrats-chevron{display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:#fff;border:none;border-radius:16px;box-shadow:0 4px 18px rgba(26,26,26,0.16);cursor:pointer;transition:transform .25s ease;}
+.congrats-hero_wrapper{display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 0 40px;}
+.congrats-hero_eyebrow{display:flex;align-items:center;gap:6px;padding:3px 16px 3px 3px;background:#fff;border-radius:100px;box-shadow:0 1px 3px rgba(0,0,0,0.15),0 1px 2px -1px rgba(0,0,0,0.15);margin-bottom:20px;}
+.congrats-hero_eyebrow-badge{padding:1.5px 6px 1.5px 7px;background:#12a557;border-radius:100px 4px 4px 100px;color:#fff;font-size:12px;font-weight:700;line-height:1.25;letter-spacing:-0.12px;}
+.congrats-hero_eyebrow-text{color:#1a1a1a;font-size:16px;font-weight:500;line-height:1.45;letter-spacing:-0.16px;}
+.congrats-hero_title{max-width:898px;color:#1a1a1a;font-size:54px;font-weight:600;line-height:1.1;letter-spacing:-1.35px;margin-bottom:25px;}
+.congrats-hero_subtitle{max-width:714px;color:#1a1a1a;font-size:18px;line-height:1.37;letter-spacing:-0.18px;margin-bottom:40px;}
+.congrats-chevron{display:flex;align-items:center;justify-content:center;width:50px;height:50px;background:rgba(255,255,255,0.5);border:none;border-radius:16px;box-shadow:0 1px 1px rgba(51,51,51,0.05),0 3px 3px rgba(51,51,51,0.05),0 6px 6px rgba(51,51,51,0.05),0 24px 24px rgba(51,51,51,0.05);cursor:pointer;transition:transform .25s ease;}
 .congrats-chevron:hover{transform:translateY(3px);}
 
 .congrats-steps{background:#fff;scroll-margin-top:20px;}
-.congrats-steps_wrapper{display:flex;flex-direction:column;align-items:center;gap:24px;padding:20px 0 60px;}
-.congrats-steps_title{display:flex;align-items:flex-start;gap:12px;max-width:640px;color:#1a1a1a;font-size:31px;font-weight:600;line-height:1.3;text-align:center;margin-bottom:8px;}
-.congrats-steps_dot{flex:none;width:14px;height:14px;margin-top:12px;background:#e53935;border-radius:50%;box-shadow:0 0 0 5px rgba(229,57,53,0.22);animation:congrats-pulse 1.6s ease-in-out infinite;}
+.congrats-steps_wrapper{display:flex;flex-direction:column;align-items:center;gap:30px;padding:20px 0 40px;}
+/* 616 = the 592px Figma text node + the 10px gap + the 14px dot, which sit
+   OUTSIDE the text box in the design. Capping the flex row at 592 instead would
+   squeeze the text to 568 and change where the headline wraps. */
+.congrats-steps_title{display:flex;align-items:flex-start;gap:10px;max-width:616px;color:#1a1a1a;font-size:40px;font-weight:600;line-height:1.15;letter-spacing:-0.6px;text-align:center;margin-bottom:0;}
+.congrats-steps_dot{flex:none;width:14px;height:14px;margin-top:15px;background:#e53935;border-radius:50%;box-shadow:0 0 0 5px rgba(229,57,53,0.22);animation:congrats-pulse 1.6s ease-in-out infinite;}
 @keyframes congrats-pulse{0%,100%{box-shadow:0 0 0 4px rgba(229,57,53,0.20);}50%{box-shadow:0 0 0 8px rgba(229,57,53,0.10);}}
-.congrats-step{display:flex;flex-direction:column;align-items:center;width:100%;max-width:714px;background:#f6f6f6;border-radius:16px;padding:30px;text-align:center;}
-.congrats-step_pill{padding:6px 13px;background:#fff;border:1px solid rgba(26,26,26,0.12);border-radius:100px;font-size:12.5px;font-weight:600;color:#41424d;margin-bottom:18px;}
-.congrats-step_title{color:#1a1a1a;font-size:22px;font-weight:600;line-height:1.3;margin-bottom:12px;}
-.congrats-step_text{color:#41424d;font-size:14.5px;line-height:1.55;max-width:654px;}
+.congrats-step{display:flex;flex-direction:column;align-items:center;width:100%;max-width:714px;background:#f6f6f6;border-radius:16px;padding:20px 30px 30px;text-align:center;}
+.congrats-step_pill{padding:4px 6px;background:#fff;border-radius:6px;box-shadow:0 0 0 0.5px rgba(0,0,0,0.12),0 0.6px 0.6px -1.25px rgba(0,0,0,0.18),0 2.29px 2.29px -2.5px rgba(0,0,0,0.16),inset 0 1px 0 rgba(255,255,255,0.25);font-size:16px;font-weight:500;line-height:1.45;letter-spacing:-0.16px;color:#1a1a1a;margin-bottom:15px;}
+.congrats-step_title{color:#1a1a1a;font-size:24px;font-weight:600;line-height:1.2;letter-spacing:-0.24px;margin-bottom:15px;}
+.congrats-step_text{color:#41424d;font-size:16px;line-height:1.45;letter-spacing:-0.32px;max-width:654px;}
 
-.congrats-invite{width:100%;max-width:647px;background:#f6f6f6;border:1px solid rgba(26,26,26,0.08);border-radius:10px;padding:20px 24px;margin-top:22px;text-align:left;position:relative;}
+.congrats-invite{width:100%;max-width:647px;background:#f6f6f6;border:1px solid rgba(26,26,26,0.08);border-radius:10px;padding:20px 24px;margin-top:30px;text-align:left;position:relative;}
 .congrats-invite_sender{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
 .congrats-invite_avatar{width:40px;height:40px;border-radius:50%;}
 .congrats-invite_sender-name{color:#1f1f1f;font-size:14px;font-weight:600;}
@@ -511,36 +514,39 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .congrats-invite_yes-wrap{position:relative;}
 .congrats-invite_btn{padding:7px 16px;background:#fff;border:1px solid rgba(26,26,26,0.18);border-radius:4px;font-size:13px;color:#222;cursor:default;}
 .congrats-invite_circle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:44px;pointer-events:none;}
-.congrats-invite_hint{margin-top:10px;margin-left:51px;color:#0d7f42;font-size:14px;font-weight:700;}
+.congrats-invite_hint{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin-top:10px;margin-left:51px;color:#008f2b;font-size:18px;font-weight:700;line-height:1;}
+.congrats-invite_hint-arrow{flex:none;width:59px;height:32px;}
 
-.congrats-bubble{max-width:557px;background:#0a63c9;border-radius:10px;padding:17px 30px;margin-top:20px;text-align:left;}
-.congrats-bubble p{color:#fff;font-size:14px;line-height:1.6;}
-.congrats-copy{display:flex;align-items:center;gap:8px;margin-top:16px;padding:10px 18px;background:#fff;border:1px solid rgba(26,26,26,0.15);border-radius:8px;font-size:13.5px;font-weight:600;color:#1a1a1a;cursor:pointer;transition:background .2s ease;}
+.congrats-bubble{max-width:557px;background:#077dff;border-radius:10px;padding:15px 30px 20px;margin-top:30px;text-align:left;}
+.congrats-bubble p{color:#fff;font-size:16px;line-height:1.45;}
+.congrats-copy{display:flex;align-items:center;gap:10px;margin-top:20px;padding:9px 16px 9px 12px;background:#fff;border:none;border-radius:6px;box-shadow:0 4px 4px rgba(23,23,23,0.04),0 1px 2px rgba(0,0,0,0.12),0 0 0 1px rgba(0,0,0,0.06);font-size:16px;font-weight:500;line-height:1.45;letter-spacing:-0.16px;color:#1a1a1a;cursor:pointer;transition:background .2s ease;}
 .congrats-copy:hover{background:#f0f0f0;}
 
 .congrats-social{background:#0c1e33;padding:24px 0 0;}
-.congrats-social_card{display:flex;flex-direction:column;align-items:center;max-width:714px;margin:0 auto;background:#fff;border-radius:8px 8px 0 0;padding:44px 30px 40px;text-align:center;}
-.congrats-social_title{color:#1a1a1a;font-size:24px;font-weight:700;margin-bottom:24px;}
-.congrats-social_divider{display:flex;align-items:center;gap:18px;width:100%;max-width:514px;margin-bottom:34px;}
+.congrats-social_card{display:flex;flex-direction:column;align-items:center;max-width:714px;margin:0 auto;background:#fff;border-radius:8px 8px 0 0;padding:30px;text-align:center;}
+.congrats-social_title{color:#1a1a1a;font-size:24px;font-weight:600;line-height:1.2;letter-spacing:-0.24px;margin-bottom:25px;}
+.congrats-social_divider{display:flex;align-items:center;gap:20px;width:100%;max-width:514px;margin-bottom:25px;}
 .congrats-social_line{flex:1;height:1px;background:rgba(26,26,26,0.15);}
-.congrats-social_talk{color:#6b6c72;font-size:22px;font-weight:600;letter-spacing:3px;}
-.congrats-social_braden{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:22px;}
+.congrats-social_talk{color:rgba(65,66,77,0.6);font-size:24px;font-weight:600;line-height:1.2;letter-spacing:-0.24px;}
+.congrats-social_braden{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:18px;}
 .congrats-social_signature{width:120px;height:auto;}
 .congrats-social_avatar{width:60px;height:60px;}
 .congrats-social_who{text-align:left;}
-.congrats-social_name{color:#1a1a1a;font-size:17px;font-weight:600;}
-.congrats-social_role{color:#41424d;font-size:14px;}
-.congrats-social_proof{color:#41424d;font-size:14.5px;margin-bottom:26px;}
-.congrats-social_cta{max-width:407px;width:100%;margin-bottom:30px;min-height:66px;}
-.congrats-social_cta .title-h5{font-size:20px;white-space:nowrap;}
-.congrats-social_awards-label{color:#41424d;font-size:14px;margin-bottom:18px;}
+.congrats-social_name{color:#1a1a1a;font-size:16px;font-weight:500;line-height:1.45;letter-spacing:-0.16px;}
+.congrats-social_role{color:#41424d;font-size:12px;line-height:1.5;}
+.congrats-social_proof{color:rgba(65,66,77,0.85);font-size:14px;line-height:1.35;letter-spacing:-0.14px;margin-bottom:25px;}
+.congrats-social_cta{max-width:407px;width:100%;margin-bottom:25px;min-height:66px;}
+.congrats-social_cta .title-h5{font-size:22px;letter-spacing:-0.22px;}
+.congrats-social_awards-label{color:rgba(65,66,77,0.85);font-size:14px;font-weight:500;line-height:1.25;letter-spacing:-0.14px;margin-bottom:20px;}
 .congrats-social_awards{width:100%;max-width:532px;height:auto;}
 
 @media(max-width:991px){
   .congrats-nav_wrapper{gap:12px;}
-  .congrats-hero_title{font-size:34px;}
+  /* Tracking is a percentage of size in the Figma ramp (H1 -2.5%), so it has to
+     be restated whenever the size drops - the desktop px value would over-tighten. */
+  .congrats-hero_title{font-size:34px;letter-spacing:-0.85px;}
   .congrats-hero_eyebrow{flex-direction:row;flex-wrap:wrap;justify-content:center;}
-  .congrats-steps_title{font-size:24px;flex-direction:column;align-items:center;}
+  .congrats-steps_title{font-size:28px;letter-spacing:-0.42px;flex-direction:column;align-items:center;}
   .congrats-steps_dot{margin-top:0;}
   .congrats-step{padding:24px 16px;}
   .congrats-invite_card{margin-left:0;flex-direction:column;gap:14px;}
@@ -548,4 +554,9 @@ li{text-decoration:none;color:inherit;list-style:none;}
   .congrats-bubble{padding:15px 18px;}
   .congrats-social_card{padding:34px 16px;}
   .congrats-social_braden{flex-wrap:wrap;}
+  /* Must be restated: this selector (0,2,0) outranks nothing, but it sits AFTER
+     the sitewide `.cta-main .title-h5{font-size:16px}` mobile rule of equal
+     specificity, so without this the label stays 22px and squeezes the arrow
+     icon out of the button's content box. */
+  .congrats-social_cta .title-h5{font-size:16px;}
 }

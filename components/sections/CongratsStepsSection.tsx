@@ -48,7 +48,16 @@ const InviteMockup = () => (
         </div>
       </div>
     </div>
-    <p className="congrats-invite_hint">↖ Please click “Yes”</p>
+    <p className="congrats-invite_hint">
+      <img
+        src="/images/sections/congrats/invite-arrow.svg"
+        alt=""
+        width={59}
+        height={32}
+        className="congrats-invite_hint-arrow"
+      />
+      Please click “Yes”
+    </p>
   </div>
 );
 
