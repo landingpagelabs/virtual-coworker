@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { TrackingFields } from '@/components/TrackingFields';
 import { CalendlyModal } from '@/components/CalendlyModal';
 import { useFormErrors } from '@/lib/useFormErrors';
+import { submitLead } from '@/lib/submitLead';
 import { COUNTRIES } from '@/lib/countries';
 
 interface FinalSectionProps {
@@ -40,6 +41,7 @@ export default function FinalSection({ section }: FinalSectionProps) {
     e.preventDefault();
     const isValid = validate(formRef.current);
     if (!isValid) return;
+    submitLead(formRef.current!, 'final');
     setShowCalendly(true);
   };
 

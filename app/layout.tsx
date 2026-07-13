@@ -3,11 +3,10 @@ import './globals.css';
 import { FaviconNotifier } from '@/components/FaviconNotifier';
 import { ModalSmall } from '@/components/ModalSmall';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ? process.env.NEXT_PUBLIC_SITE_URL
-  : process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : 'http://localhost:3000';
+// Canonical production domain. Never fall back to VERCEL_URL — that bakes a
+// per-deployment host into og/canonical tags, which breaks link previews as
+// soon as that deployment is pruned.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://try.virtualcoworker.com';
 
 const title = 'Virtual Coworker | Top Filipino Talent';
 const description =
@@ -27,13 +26,13 @@ export const metadata: Metadata = {
     siteName: 'Virtual Coworker',
     type: 'website',
     locale: 'en_AU',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: title }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
   },
 };
 
