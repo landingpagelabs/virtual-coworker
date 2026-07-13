@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { loadMasonry, whenNearViewport } from '@/lib/loadVendor';
 
 interface ReviewsSectionProps {
   section: {
@@ -8,6 +9,10 @@ interface ReviewsSectionProps {
     reviews?: { _key?: string; name?: string; role?: string; quote?: string }[];
   };
 }
+
+// Cards rendered before the user expands the wall (CSS caps the visible
+// count at 9 desktop / 3 mobile; the extra buffer covers wider viewports).
+const INITIAL_CARDS = 12;
 
 const REVIEWS = [
   { img: '1', name: "Douglas", role: "Construction business owner", quote: "We tried offshore VAs through other platforms and didn't have great luck. Felt transactional, lots of turnover. Virtual Coworker has been a different experience… What sets VC apart is that there's an actual account team behind the placement. When I had a question early on, someone called me back the same day. That kind of accountability is rare at this price point." },
@@ -106,19 +111,23 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
 
     const onLoad = () => masonryRef.current?.layout?.();
 
-    let timer: number | undefined;
-    if (!ensure()) {
-      timer = window.setInterval(() => {
-        if (ensure()) {
-          window.clearInterval(timer);
-          masonryRef.current?.layout?.();
-        }
-      }, 100);
+    // Masonry is fetched only once the wall nears the viewport (it's far below
+    // the fold), so it costs nothing on first paint.
+    let killed = false;
+    const grid = gridRef.current;
+    if (grid) {
+      (async () => {
+        await whenNearViewport(grid);
+        if (killed) return;
+        await loadMasonry();
+        if (killed) return;
+        if (ensure()) masonryRef.current?.layout?.();
+      })();
     }
     window.addEventListener('load', onLoad);
 
     return () => {
-      if (timer) window.clearInterval(timer);
+      killed = true;
       window.removeEventListener('load', onLoad);
       masonryRef.current?.destroy?.();
       masonryRef.current = null;
@@ -154,7 +163,10 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
 
             <div ref={gridRef} className={`reviews_list${expanded ? ' expanded' : ''}`}>
               <div className={`reasons_decor${expanded ? ' active' : ''}`} />
-              {REVIEWS.map((r, i) => {
+              {/* Only the cards that can actually be seen before "Show more"
+                  are rendered (CSS shows 9 on desktop / 3 on mobile). Putting
+                  all 52 in the initial HTML tripled the document and the DOM. */}
+              {(expanded ? REVIEWS : REVIEWS.slice(0, INITIAL_CARDS)).map((r, i) => {
                 // Text is content-driven; avatars stay welded to their index
                 // (the img filenames aren't derivable from the content).
                 const c = section.reviews?.[i];
@@ -170,7 +182,7 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
                     </div>
                     <div className="reviews_avatar-info">
                       <div className="reviews_avatar">
-                        <img src={`/images/sections/reviews/${r.img}.avif`} alt={name} />
+                        <img src={`/images/sections/reviews/${r.img}.avif`} width={88} height={88} loading="lazy" decoding="async" alt={name} />
                       </div>
                       <div className="reviews_info">
                         <p className="text-label-extra-small">{name}</p>
@@ -183,7 +195,7 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
             </div>
 
             <div className="reasons_cta" id="reviews-cta" onClick={handleToggle}>
-              <img className="reasons_cta-image" src="/images/sections/reviews/zxc.avif" alt="" />
+              <img className="reasons_cta-image" src="/images/sections/reviews/zxc.avif" width={260} height={61} alt="" loading="lazy" decoding="async" />
               <p className="text-body-regular white ls-2 mobile-d-none">400+ Businesses Proudly Matched With Expert VAs</p>
               <svg width="1" height="18" viewBox="0 0 1 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="0.5" y1="18" x2="0.5" stroke="white" strokeOpacity="0.3" />

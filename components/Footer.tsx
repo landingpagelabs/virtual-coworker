@@ -1,5 +1,7 @@
 import { DynamicMonth } from '@/components/DynamicMonth';
 
+const AWARD_DIMS: Record<number, [number, number]> = {1: [102, 103], 2: [102, 102], 3: [97, 97], 4: [102, 110], 5: [102, 102], 6: [102, 102]};
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -13,7 +15,7 @@ export default function Footer() {
             <div className="footer_head">
               <div className="footer-head_top">
                 <div className="footer_image">
-                  <img className="footer_img" src="/images/footer/footer_logo.svg" alt="Virtual Coworker" />
+                  <img className="footer_img" src="/images/footer/footer_logo.svg" alt="Virtual Coworker" loading="lazy" decoding="async" />
                 </div>
                 <div className="footer_text-wrap">
                   <p className="text-body-regular is-white">
@@ -54,7 +56,7 @@ export default function Footer() {
                 <div className="footer-content_list">
                   {[1, 2, 3, 4, 5, 6].map((n) => (
                     <a key={n} href="#" className="item_footer-content">
-                      <img className="item-footer-content_img" src={`/images/footer/award_${n}.avif`} alt={`Award ${n}`} />
+                      <img className="item-footer-content_img" src={`/images/footer/award_${n}.avif`} width={AWARD_DIMS[n][0]} height={AWARD_DIMS[n][1]} loading="lazy" decoding="async" alt={`Award ${n}`} />
                     </a>
                   ))}
                 </div>
@@ -67,7 +69,7 @@ export default function Footer() {
                 <div className="footer-content_list">
                   {[1, 2, 3, 4, 5].map((n) => (
                     <a key={n} href="#" className="item_footer-content-second">
-                      <img src={`/images/footer/secong_logo_${n}.avif`} alt={`Feature logo ${n}`} />
+                      <img src={`/images/footer/secong_logo_${n}.avif`} loading="lazy" decoding="async" alt={`Feature logo ${n}`} />
                     </a>
                   ))}
                 </div>
@@ -95,7 +97,7 @@ export default function Footer() {
             <div className="footer_down">
               <div className="item_footer-down">
                 <div className="item-footer-down_image">
-                  <img src="/images/footer/footer_bottom-icon.avif" alt="" />
+                  <img src="/images/footer/footer_bottom-icon.avif" width={96} height={96} alt="" loading="lazy" decoding="async" />
                 </div>
                 <div className="item-footer-down_text-wrap">
                   <p className="text-label-extra-small is-white">Built By Landing Page Labs</p>

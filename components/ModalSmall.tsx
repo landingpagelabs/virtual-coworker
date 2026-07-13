@@ -10,7 +10,7 @@ export function ModalSmall() {
     const modal = modalRef.current;
     if (!modal) return;
 
-    // Shows once, on the FIRST exit intent, then disappears after 15 seconds
+    // Shows once, on a genuine exit intent, then disappears after 15 seconds
     // (Figma annotation on node 5005:122460).
     let triggered = false;
     const show = () => {
@@ -21,29 +21,57 @@ export function ModalSmall() {
       cleanup();
     };
 
-    // Desktop exit-intent: the cursor heads toward the top of the window.
+    // Only arm once the visitor has actually engaged with the page. Without
+    // this the pop fired instantly, because the cursor is already near the top
+    // of the window right after someone clicks a link or types the URL.
+    let armed = false;
+    const ARM_DELAY_MS = 8000;
+    const armTimer = window.setTimeout(() => {
+      armed = true;
+    }, ARM_DELAY_MS);
+
+    // The pointer must be inside the page before a "leaving" gesture counts.
+    let pointerWasInside = false;
     const onMouseMove = (e: MouseEvent) => {
-      if (e.clientY < 50) show();
+      if (e.clientY > 120) pointerWasInside = true;
     };
 
-    // Mobile exit-intent: a fast upward scroll (no cursor to track).
+    // Desktop exit-intent: the cursor actually LEAVES the viewport through the
+    // top (toward the tabs / address bar / close button), not merely hovers up
+    // near the nav. relatedTarget === null means it left the document.
+    const onMouseOut = (e: MouseEvent) => {
+      if (!armed || !pointerWasInside) return;
+      if (e.relatedTarget === null && (e as MouseEvent).clientY <= 0) show();
+    };
+
+    // Mobile exit-intent: a decisive fast scroll back up toward the top, after
+    // the visitor has read a fair way down (no cursor to track on touch).
     let lastY = window.scrollY;
     let lastT = Date.now();
     const onScroll = () => {
+      if (!armed) {
+        lastY = window.scrollY;
+        lastT = Date.now();
+        return;
+      }
       const now = Date.now();
       const dy = window.scrollY - lastY;
       const dt = now - lastT;
-      // Scrolled up faster than ~1.2px/ms after being at least a viewport deep.
-      if (dy < 0 && dt > 0 && -dy / dt > 1.2 && lastY > window.innerHeight) show();
+      const speed = dt > 0 ? -dy / dt : 0; // px per ms, upward positive
+      // Deep into the page, flicking up hard, and heading for the top.
+      if (dy < 0 && speed > 2 && lastY > window.innerHeight * 2) show();
       lastY = window.scrollY;
       lastT = now;
     };
 
     const cleanup = () => {
+      window.clearTimeout(armTimer);
       document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseout', onMouseOut);
       window.removeEventListener('scroll', onScroll);
     };
     document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseout', onMouseOut);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
       cleanup();
@@ -65,11 +93,11 @@ export function ModalSmall() {
           </svg>
         </div>
         <div className="modal-small_image">
-          <img src="/images/header/img-modal.avif" alt="Virtual Coworker team — Top Virtual Assistant Company (Clutch)" />
+          <img src="/images/header/img-modal.avif" width={380} height={434} alt="Virtual Coworker team — Top Virtual Assistant Company (Clutch)" loading="lazy" decoding="async" />
         </div>
         <div className="modal-small_info">
           <div className="modal-small_logo">
-            <img src="/images/header/Client Logo.avif" alt="" />
+            <img src="/images/header/Client Logo.avif" width={184} height={61} alt="" loading="lazy" decoding="async" />
           </div>
           <h2 className="title-h5 white">At least get some free outsourcing advice</h2>
           <div className="modal-small_cta">

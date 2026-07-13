@@ -171,17 +171,17 @@ export default function CsSection({
                   <GradientLine id="gl4" />
                 </div>
                 <div className="cs_list-awards-flex">
-                  <div className="cs_list-awards-item item-1"><img src="/images/sections/cs/founded.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-2"><img src="/images/sections/cs/Avatar Card.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-3"><img src="/images/sections/cs/forbes-business-council 2.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-4"><img src="/images/sections/cs/Avatar Card (1).avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-5"><img src="/images/sections/cs/Badges.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-6"><img src="/images/sections/cs/Clutch Badge.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-7"><img src="/images/sections/cs/brw 1.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-8"><img src="/images/sections/cs/startup 1.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-9"><img src="/images/sections/cs/Figure 1.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-10"><img src="/images/sections/cs/Sydney_Morning_Herald_logo 1.avif" alt="" /></div>
-                  <div className="cs_list-awards-item item-11"><img src="/images/sections/cs/startupsmart_restored 1.avif" alt="" /></div>
+                  <div className="cs_list-awards-item item-1"><img src="/images/sections/cs/founded.avif" width={102} height={103} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-2"><img src="/images/sections/cs/Avatar Card.avif" width={104} height={104} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-3"><img src="/images/sections/cs/forbes-business-council 2.avif" width={96} height={96} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-4"><img src="/images/sections/cs/Avatar Card (1).avif" width={110} height={119} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-5"><img src="/images/sections/cs/Badges.avif" width={110} height={110} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-6"><img src="/images/sections/cs/Clutch Badge.avif" width={94} height={94} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-7"><img src="/images/sections/cs/brw 1.avif" width={94} height={39} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-8"><img src="/images/sections/cs/startup 1.avif" width={136} height={82} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-9"><img src="/images/sections/cs/Figure 1.avif" width={158} height={66} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-10"><img src="/images/sections/cs/Sydney_Morning_Herald_logo 1.avif" width={264} height={29} alt="" loading="lazy" decoding="async" /></div>
+                  <div className="cs_list-awards-item item-11"><img src="/images/sections/cs/startupsmart_restored 1.avif" width={100} height={100} alt="" loading="lazy" decoding="async" /></div>
                 </div>
               </div>
             </div>

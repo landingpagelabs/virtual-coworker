@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { loadSplide, whenNearViewport } from '@/lib/loadVendor';
 
 interface TalentSectionProps {
   section: {
@@ -37,22 +38,23 @@ export default function TalentSection({ section }: TalentSectionProps) {
     let instance: any = null;
     let killed = false;
 
-    // The slides have a fixed size in CSS (.talent-item is 250px wide, the image
-    // is absolutely positioned), so autoWidth is stable without waiting for
-    // images. We only wait for the deferred Splide CDN scripts to be ready.
-    const timer = window.setInterval(() => {
-      if (killed) {
-        window.clearInterval(timer);
-        return;
-      }
+    // Splide is fetched only once this carousel nears the viewport, so it
+    // costs nothing on first paint. The slides have a fixed size in CSS
+    // (.talent-item is 250px wide, the image is absolutely positioned), so
+    // autoWidth is stable without waiting for images.
+    const el = document.querySelector<HTMLElement>('.talent-carousel');
+    if (!el) return;
+
+    (async () => {
+      await whenNearViewport(el);
+      if (killed) return;
+      await loadSplide();
+      if (killed) return;
+
       const Splide = (window as any).Splide;
       const extensions = (window as any).splide?.Extensions;
       if (!Splide || !extensions) return;
 
-      const el = document.querySelector<HTMLElement>('.talent-carousel');
-      if (!el) return;
-
-      window.clearInterval(timer);
       instance = new Splide(el, {
         type: 'loop',
         // Manually draggable (Figma annotation 5251:15082); auto-scroll
@@ -64,14 +66,13 @@ export default function TalentSection({ section }: TalentSectionProps) {
         clones: 40,
         autoScroll: { speed: 0.4, pauseOnHover: false, autoStart: true },
       }).mount(extensions);
-    }, 100);
+    })();
 
     // destroy(true) fully restores the DOM so React StrictMode's double-mount
     // (mount → unmount → mount) re-initialises cleanly instead of leaving a
     // half-torn-down carousel.
     return () => {
       killed = true;
-      window.clearInterval(timer);
       instance?.destroy?.(true);
     };
   }, []);
@@ -96,7 +97,7 @@ export default function TalentSection({ section }: TalentSectionProps) {
                   <div className="talent-list splide__list">
                     {TALENT.map((t) => (
                       <div className="talent-item splide__slide" key={t.img}>
-                        <img className="talent-item_img" src={`/images/sections/talent/${t.img}.avif`} alt={t.name} />
+                        <img className="talent-item_img" src={`/images/sections/talent/${t.img}.avif`} width={500} height={600} loading="lazy" decoding="async" alt={t.name} />
                         <div className="talent-item_content">
                           <p className="text-label-extra-small white">{t.name}</p>
                           <p className="text-body-small white">{t.role}</p>
@@ -135,7 +136,7 @@ export default function TalentSection({ section }: TalentSectionProps) {
               </div>
               <div className="work_qoute-wrap">
                 <div className="work-qoute_image-2">
-                  <img className="work-qoute_img" src="/images/sections/reviews/Frame 2147227455.avif" alt="qoute image" />
+                  <img className="work-qoute_img" src="/images/sections/reviews/Frame 2147227455.avif" width={128} height={75} alt="qoute image" loading="lazy" decoding="async" />
                 </div>
                 <div className="work-qoute_right">
                   <div className="work-qoute-right_text-wrap">

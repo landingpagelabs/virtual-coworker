@@ -14,14 +14,7 @@
     {
       "_key": "c5b54d91cc54",
       "_type": "congratsHeaderSection",
-      "badgeText": "CONSULTATION BOOKED!",
-      "logo": {
-        "_type": "image",
-        "asset": {
-          "_ref": "image-e692b990dedebdd034854d71e2960c501a90fef0-105x35-svg",
-          "_type": "reference"
-        }
-      }
+      "badgeText": "CONSULTATION BOOKED!"
     },
     {
       "_key": "2597b85bb01e",
@@ -37,13 +30,6 @@
         {
           "_key": "c49643b42927",
           "content": "We’ve sent a confirmation email with all your call details. Please click \"Yes\" (Google) or \"Accept\" (Microsoft) to confirm your invite. If something changes and you can’t make it, reply to that email and we’ll give your slot to another business. We only have a few each month.",
-          "image": {
-            "_type": "image",
-            "asset": {
-              "_ref": "image-cd26a10620c9efc3aa8a835784e763001e2574e9-1941x901-png",
-              "_type": "reference"
-            }
-          },
           "strapline": "Step #1/3",
           "title": "Add the event to your calendar and set a reminder"
         },

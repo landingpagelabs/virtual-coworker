@@ -16,6 +16,9 @@ export default function CongratsHeaderSection({ section }: CongratsHeaderSection
               className="congrats-nav_logo"
               src="/images/sections/congrats/congrats-logo.svg"
               alt="Virtual Coworker"
+              width={105}
+              height={35}
+              fetchPriority="high"
             />
             <div className="congrats-nav_badge">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

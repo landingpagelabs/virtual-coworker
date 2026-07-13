@@ -64,6 +64,11 @@ export default function HeroSection({ section }: HeroSectionProps) {
 
   return (
     <section className="hero">
+      {/* The hero backdrop is a CSS background, so the browser can't find it
+          until the stylesheet is parsed — one extra round trip on the LCP
+          path. This preload puts it in the HTML for the preload scanner. */}
+      {/* eslint-disable-next-line @next/next/no-head-element */}
+      <link rel="preload" as="image" href="/images/sections/hero/Hero.avif" fetchPriority="high" />
       <div className="padding-global">
         <div className="container-large">
           <div className="hero_wrapper">
@@ -145,7 +150,7 @@ export default function HeroSection({ section }: HeroSectionProps) {
                   </button>
                   <div className="form-main-info-bot">
                     <div className="form-main-info-image">
-                      <img src="/images/sections/hero/Frame 2147261038.avif" alt="" />
+                      <img src="/images/sections/hero/Frame 2147261038.avif" fetchPriority="high" width={378} height={79} alt="" />
                     </div>
                     <svg width="1" height="29" viewBox="0 0 1 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <line x1="0.5" y1="28.2285" x2="0.5" y2="0" stroke="black" strokeOpacity="0.25" />

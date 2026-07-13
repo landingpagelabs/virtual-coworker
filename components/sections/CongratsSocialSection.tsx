@@ -24,14 +24,14 @@ export default function CongratsSocialSection({ section }: CongratsSocialSection
             <div className="congrats-social_braden">
               <img
                 className="congrats-social_signature"
-                src="/images/sections/congrats/congrats-signature.avif"
+                src="/images/sections/congrats/congrats-signature.avif" width={240} height={70}
                 alt="Braden Yuill signature"
-              />
+              loading="lazy" decoding="async" />
               <img
                 className="congrats-social_avatar"
-                src="/images/sections/congrats/congrats-braden.avif"
+                src="/images/sections/congrats/congrats-braden.avif" width={120} height={118}
                 alt="Braden Yuill"
-              />
+              loading="lazy" decoding="async" />
               <div className="congrats-social_who">
                 <p className="congrats-social_name">Braden Yuill</p>
                 <p className="congrats-social_role">Founder &amp; CEO</p>
@@ -54,9 +54,9 @@ export default function CongratsSocialSection({ section }: CongratsSocialSection
             <p className="congrats-social_awards-label">Awards &amp; Features</p>
             <img
               className="congrats-social_awards"
-              src="/images/sections/congrats/congrats-awards.avif"
+              src="/images/sections/congrats/congrats-awards.avif" width={1064} height={204}
               alt="Awards and features: Google 5-star reviews, Forbes, Clutch, Trustpilot, BRW, Startup Smart, Startup Daily, The Sydney Morning Herald"
-            />
+            loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

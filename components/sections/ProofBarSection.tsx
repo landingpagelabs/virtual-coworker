@@ -35,10 +35,10 @@ export default function ProofBarSection({ section }: ProofBarSectionProps) {
             </div>
             <div className="proof-bar_right">
               <div className="proof-bar_image-first">
-                <img className="proof-bar_img-first" src="/images/sections/proof-bar/proof-bar-stack.avif" alt="proof bar people" />
+                <img className="proof-bar_img-first" src="/images/sections/proof-bar/proof-bar-stack.avif" width={366} height={85} alt="proof bar people" loading="lazy" decoding="async" />
               </div>
               <div className="proof-bar_image-second">
-                <img className="proof-bar_img-second" src="/images/sections/proof-bar/proof-bar-rating.png" alt="proof bar stars" />
+                <img className="proof-bar_img-second" src="/images/sections/proof-bar/proof-bar-rating.png" width={251} height={87} alt="proof bar stars" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

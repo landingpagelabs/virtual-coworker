@@ -170,7 +170,7 @@ export default function FinalSection({ section }: FinalSectionProps) {
                   </button>
                   <div className="form-main-info-bot">
                     <div className="form-main-info-image">
-                      <img src="/images/sections/hero/Frame 2147261038.avif" alt="" />
+                      <img src="/images/sections/hero/Frame 2147261038.avif" width={378} height={79} alt="" loading="lazy" decoding="async" />
                     </div>
                     <svg width="1" height="29" viewBox="0 0 1 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <line x1="0.5" y1="28.2285" x2="0.5" y2="0" stroke="black" strokeOpacity="0.25" />
@@ -185,10 +185,10 @@ export default function FinalSection({ section }: FinalSectionProps) {
 
             <div className="final_down">
               <div className="final-down_image">
-                <img className="final-down_img" src="/images/sections/final/final_1.avif" alt="bottom image" />
+                <img className="final-down_img" src="/images/sections/final/final_1.avif" width={1060} height={632} alt="bottom image" loading="lazy" decoding="async" />
               </div>
               <div className="final-down_image">
-                <img className="final-down_img" src="/images/sections/final/final_2.avif" alt="bottom image" />
+                <img className="final-down_img" src="/images/sections/final/final_2.avif" width={1060} height={630} alt="bottom image" loading="lazy" decoding="async" />
               </div>
             </div>
             <CalendlyModal open={showCalendly} />

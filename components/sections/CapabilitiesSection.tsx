@@ -53,23 +53,23 @@ export default function CapabilitiesSection({ section }: CapabilitiesSectionProp
 
             <div className="capabilities_bottom">
               <div className="capabilities_left">
-                <img className="capabilities-left_img" src="/images/sections/reviews/12345.avif" alt="capabilities left image" />
+                <img className="capabilities-left_img" src="/images/sections/reviews/12345.avif" width={884} height={702} alt="capabilities left image" loading="lazy" decoding="async" />
               </div>
               <div className="capabilities_right">
                 <div className="capabilities-right_top">
                   <div className="capabilities-right-top_head">
                     <div className="capabilities-right-top-head_image">
-                      <img className="capabilities-right-top-head_img" src="/images/sections/capabilities/capabilities_switch.avif" alt="" />
+                      <img className="capabilities-right-top-head_img" src="/images/sections/capabilities/capabilities_switch.avif" width={54} height={23} alt="" loading="lazy" decoding="async" />
                     </div>
                     <div className="capabilities-right-top-head_text-wrap">
                       <p className="text-label-extra-small is-white">Have Your Next Great Hire In Days</p>
                     </div>
                   </div>
                   <div className="capabilities-right-top_people-wrap">
-                    <img className="capabilities-right-top-people_img" src="/images/sections/capabilities/capabilities_line.avif" alt="" />
+                    <img className="capabilities-right-top-people_img" src="/images/sections/capabilities/capabilities_line.avif" width={882} height={126} alt="" loading="lazy" decoding="async" />
                   </div>
                   <div className="capabilities-right-top_review-wrap">
-                    <img className="capabilities-right-top-review_img" src="/images/sections/capabilities/capabilities_review.avif" alt="" />
+                    <img className="capabilities-right-top-review_img" src="/images/sections/capabilities/capabilities_review.avif" width={600} height={63} alt="" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="capabilities-right_bottom">

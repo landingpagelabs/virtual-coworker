@@ -5,7 +5,10 @@
 *{margin:0;}
 @media(prefers-reduced-motion:no-preference){html{interpolate-size:allow-keywords;}}
 body{line-height:1.5;-webkit-font-smoothing:antialiased;}
+/* height:auto keeps the width/height attributes (which prevent layout shift)
+   from forcing a wrong aspect ratio when CSS constrains the width. */
 img,picture,video,canvas,svg{display:block;max-width:100%;}
+img{height:auto;}
 input,button,textarea,select{font:inherit;}
 p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word;}
 #root,#__next{isolation:isolate;}
@@ -20,21 +23,13 @@ a{text-decoration:none;color:inherit;}
 li{text-decoration:none;color:inherit;list-style:none;}
 
 /* ======================================================
-   FONTS — Inter (локальні woff2 з /public/fonts).
-   unicode-range розділяє latin/cyrillic, щоб для одного
-   font-family бралась потрібна підмножина гліфів.
+   FONTS — Inter, self-hosted woff2 from /public/fonts.
    ====================================================== */
-/* Inter — latin */
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-500.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-600.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-700.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/inter-800.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-/* Inter — cyrillic */
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-cyrillic-400.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-cyrillic-500.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-cyrillic-600.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/inter-cyrillic-700.woff2') format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}
 
 /* ======================================================
    GLOBAL — layout, typography tokens, shared utilities
@@ -104,7 +99,7 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .work_qoute-wrap{background-color:#1B2C3F;padding-left:10px;padding-right:20px;padding-block:11px;border-radius:10px;width:100%;max-width:533px;display:flex;flex-direction:row;gap:12px;}
 .work-qoute_right{display:flex;flex-direction:column;gap:5px;}
 .work-qoute_image-2{width:100%;max-width:64px;height: 34px;}
-.work-qoute_img{width:100%;height:100%;}
+.work-qoute_img{width:100%;height:100%;object-fit:contain;}
 
 /* ======================================================
    HEADER
@@ -421,9 +416,10 @@ li{text-decoration:none;color:inherit;list-style:none;}
   .steps_list::-webkit-scrollbar{display:none;}
   .item_steps{flex:0 0 87%;scroll-snap-align:start;}
   .steps_slider-nav{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:24px;}
-  .steps_slider-dots{display:flex;align-items:center;gap:8px;padding:15px 18px;background:rgba(255,255,255,0.12);border-radius:61px;}
-  .steps_slider-dot{width:5px;height:5px;padding:0;border:none;border-radius:50%;background:rgba(255,255,255,0.24);cursor:pointer;transition:background .3s ease;}
-  .steps_slider-dot.is-active{background:#fff;}
+  .steps_slider-dots{display:flex;align-items:center;gap:0;padding:8px 10px;background:rgba(255,255,255,0.12);border-radius:61px;}
+  .steps_slider-dot{width:24px;height:24px;padding:0;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .steps_slider-dot::before{content:"";width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.24);transition:background .3s ease;}
+  .steps_slider-dot.is-active::before{background:#fff;}
   .steps_slider-arrow{display:flex;padding:0;border:none;background:none;line-height:0;cursor:pointer;transition:opacity .3s ease;}
   .steps_slider-arrow:disabled{opacity:0.4;cursor:default;}
   .final_down{flex-direction:column;margin-top:40px;}
@@ -481,7 +477,7 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .congrats-confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:900;}
 .congrats-hero_wrapper{display:flex;flex-direction:column;align-items:center;text-align:center;padding:44px 0 40px;}
 .congrats-hero_eyebrow{display:flex;align-items:center;gap:10px;padding:6px 16px 6px 6px;background:#fff;border-radius:100px;box-shadow:0 2px 12px rgba(26,26,26,0.10);margin-bottom:34px;}
-.congrats-hero_eyebrow-badge{padding:4px 10px;background:#12a557;border-radius:6px;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:0.5px;}
+.congrats-hero_eyebrow-badge{padding:4px 10px;background:#0d7f42;border-radius:6px;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:0.5px;}
 .congrats-hero_eyebrow-text{color:#1a1a1a;font-size:15px;}
 .congrats-hero_title{max-width:900px;color:#1a1a1a;font-size:54px;font-weight:600;line-height:1.15;letter-spacing:-0.02em;margin-bottom:28px;}
 .congrats-hero_subtitle{max-width:640px;color:#41424d;font-size:17px;line-height:1.5;margin-bottom:40px;}
@@ -515,9 +511,9 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .congrats-invite_yes-wrap{position:relative;}
 .congrats-invite_btn{padding:7px 16px;background:#fff;border:1px solid rgba(26,26,26,0.18);border-radius:4px;font-size:13px;color:#222;cursor:default;}
 .congrats-invite_circle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:44px;pointer-events:none;}
-.congrats-invite_hint{margin-top:10px;margin-left:51px;color:#12a557;font-size:14px;font-weight:700;}
+.congrats-invite_hint{margin-top:10px;margin-left:51px;color:#0d7f42;font-size:14px;font-weight:700;}
 
-.congrats-bubble{max-width:557px;background:#077dff;border-radius:10px;padding:17px 30px;margin-top:20px;text-align:left;}
+.congrats-bubble{max-width:557px;background:#0a63c9;border-radius:10px;padding:17px 30px;margin-top:20px;text-align:left;}
 .congrats-bubble p{color:#fff;font-size:14px;line-height:1.6;}
 .congrats-copy{display:flex;align-items:center;gap:8px;margin-top:16px;padding:10px 18px;background:#fff;border:1px solid rgba(26,26,26,0.15);border-radius:8px;font-size:13.5px;font-weight:600;color:#1a1a1a;cursor:pointer;transition:background .2s ease;}
 .congrats-copy:hover{background:#f0f0f0;}
@@ -527,7 +523,7 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .congrats-social_title{color:#1a1a1a;font-size:24px;font-weight:700;margin-bottom:24px;}
 .congrats-social_divider{display:flex;align-items:center;gap:18px;width:100%;max-width:514px;margin-bottom:34px;}
 .congrats-social_line{flex:1;height:1px;background:rgba(26,26,26,0.15);}
-.congrats-social_talk{color:#9a9ba1;font-size:22px;font-weight:600;letter-spacing:3px;}
+.congrats-social_talk{color:#6b6c72;font-size:22px;font-weight:600;letter-spacing:3px;}
 .congrats-social_braden{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:22px;}
 .congrats-social_signature{width:120px;height:auto;}
 .congrats-social_avatar{width:60px;height:60px;}

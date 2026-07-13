@@ -51,22 +51,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {/* End Google Tag Manager */}
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
-          defer
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
-          defer
-        />
-        <script
-          src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
-          defer
-        />
+
+        {/* Above-the-fold font weights: without these the browser only finds
+            them after parsing the CSS, so the hero H1 (the LCP element)
+            repaints late. */}
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-400.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-600.woff2" crossOrigin="anonymous" />
+
+        {/* Splide + Masonry are self-hosted and loaded on demand by the
+            components that need them (see lib/loadVendor.ts) — they used to
+            be render-path CDN scripts costing ~1.4s of phone CPU up front. */}
+        <link rel="stylesheet" href="/vendor/splide.min.css" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
