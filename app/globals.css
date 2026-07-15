@@ -550,11 +550,20 @@ li{text-decoration:none;color:inherit;list-style:none;}
   /* Tracking is a percentage of size in the Figma ramp (H1 -2.5%), so it has to
      be restated whenever the size drops - the desktop px value would over-tighten. */
   .congrats-hero_title{font-size:34px;letter-spacing:-0.85px;}
-  .congrats-hero_eyebrow{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+  /* Mobile: the strapline comes OUT of the pill (Figma mobile annotation,
+     2026-07-15) — the badge keeps its own capsule, the sentence flows below
+     as plain text instead of wrapping inside a two-line pill. */
+  .congrats-hero_eyebrow{flex-direction:column;gap:8px;padding:0;background:transparent;border-radius:0;box-shadow:none;}
+  .congrats-hero_eyebrow-badge{border-radius:100px;padding:2.5px 10px;}
   .congrats-steps_title{font-size:28px;letter-spacing:-0.42px;flex-direction:column;align-items:center;}
   .congrats-steps_dot{margin-top:0;}
   .congrats-step{padding:24px 16px;}
   .congrats-invite_card{margin-left:0;flex-direction:column;gap:14px;}
+  /* Mobile: the invite details need air — the title wraps to two lines here
+     and the desktop margins read cramped (Figma mobile annotations). */
+  .congrats-invite_title{margin-bottom:6px;}
+  .congrats-invite_link{margin-bottom:16px;}
+  .congrats-invite_row{margin-bottom:9px;}
   .congrats-invite_hint{margin-left:0;}
   .congrats-bubble{padding:15px 18px;}
   .congrats-social_card{padding:34px 16px;}
