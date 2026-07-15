@@ -135,8 +135,15 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
   }, []);
 
   // Re-layout whenever the list expands/collapses (after the CSS reflow).
+  // reloadItems() first: expanding renders 40+ new cards that Masonry has
+  // never seen, and layout() alone only re-lays its cached item list — the
+  // new cards would flow unpositioned over the absolutely-placed ones (the
+  // "Show More isn't working" bug, Figma annotation 2026-07-15).
   useEffect(() => {
-    const t = setTimeout(() => masonryRef.current?.layout?.(), 60);
+    const t = setTimeout(() => {
+      masonryRef.current?.reloadItems?.();
+      masonryRef.current?.layout?.();
+    }, 60);
     return () => clearTimeout(t);
   }, [expanded]);
 

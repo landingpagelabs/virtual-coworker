@@ -40,28 +40,42 @@ export function TrackingFields() {
     // Anything captured on a previous page view / visit.
     let stored: Partial<Params> = {};
     try {
-      stored = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '{}');
+      // `|| {}` also covers a literal "null" in storage — JSON.parse returns
+      // null without throwing, and stored[key] on null would crash the effect.
+      stored = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '{}') || {};
     } catch {
       stored = {};
     }
 
     const url = new URLSearchParams(window.location.search);
-    const next = emptyParams();
-    let sawFreshValue = false;
+    const utmKeys = PARAM_KEYS.filter((k) => k !== 'gclid');
+    const freshUtm = utmKeys.some((k) => url.get(k));
+    const freshGclid = !!url.get('gclid');
 
-    for (const key of PARAM_KEYS) {
-      const fromUrl = url.get(key);
-      if (fromUrl) {
-        next[key] = fromUrl; // last-touch: a value in the current URL wins
-        sawFreshValue = true;
-      } else if (stored[key]) {
-        next[key] = stored[key] as string;
-      }
+    // The UTM set is one atomic bundle describing ONE touch — never merge keys
+    // across visits, or a facebook utm_source ends up stored next to last
+    // month's google utm_campaign (and a stale gclid), and the CRM row blames
+    // the wrong channel. Rules:
+    //   fresh utm_* in the URL  -> the whole utm bundle comes from the URL,
+    //                              missing keys stay empty, and a stored gclid
+    //                              from an older touch is dropped with it
+    //   bare gclid only         -> a Google click: gclid updates, the stored
+    //                              utm bundle is untouched (a bare gclid is
+    //                              not a UTM touch)
+    //   nothing fresh           -> the stored bundle rides along unchanged
+    const next = emptyParams();
+    for (const key of utmKeys) {
+      next[key] = freshUtm ? url.get(key) ?? '' : (stored[key] as string) ?? '';
     }
+    next.gclid = freshGclid
+      ? (url.get('gclid') as string)
+      : freshUtm
+        ? ''
+        : ((stored.gclid as string) ?? '');
 
     // Only rewrite storage when this visit actually carried attribution, so we
     // never clobber a previously captured campaign with empties.
-    if (sawFreshValue) {
+    if (freshUtm || freshGclid) {
       try {
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
       } catch {

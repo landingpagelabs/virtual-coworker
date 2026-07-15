@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 // Calendly links per Tyce's Figma embed-code annotations (2026-07-13).
@@ -51,15 +51,26 @@ interface CalendlyModalProps {
  */
 export function CalendlyModal({ open, lead }: CalendlyModalProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
+  // When Calendly's script can't load (privacy blocker, proxy, network drop),
+  // the modal is non-dismissable and scroll is locked — without a fallback the
+  // visitor is stuck staring at an empty box forever. `failed` swaps in a
+  // direct link to the same booking page instead.
+  const [failed, setFailed] = useState(false);
+  const bookingUrlRef = useRef<string>(DEFAULT_CALENDLY_URL);
 
   useEffect(() => {
     if (!open) return;
+    setFailed(false);
+    let cancelled = false;
 
     // Make sure Calendly's widget script is on the page.
     if (!document.querySelector(`script[src="${CALENDLY_SRC}"]`)) {
       const script = document.createElement('script');
       script.src = CALENDLY_SRC;
       script.async = true;
+      script.onerror = () => {
+        if (!cancelled) setFailed(true);
+      };
       document.body.appendChild(script);
     }
 
@@ -114,24 +125,33 @@ export function CalendlyModal({ open, lead }: CalendlyModalProps) {
       if (value) url.searchParams.set(field, value);
     }
 
-    let cancelled = false;
+    // URLSearchParams writes spaces as '+', but Calendly's widget
+    // decodeURIComponent()s the params (which leaves '+' alone) and
+    // re-encodes — so a '+' arrives as a literal plus and the fallback
+    // prefill renders "Jane+Smith". Re-encode spaces as %20. Safe: in a
+    // URLSearchParams string a bare '+' can only ever mean a space
+    // (a literal plus is already %2B).
+    const bookingUrl = url.toString().replace(/\+/g, '%20');
+    bookingUrlRef.current = bookingUrl;
+
+    let tries = 0;
     const tryInit = () => {
       if (cancelled) return;
       const Calendly = (window as any).Calendly;
       if (Calendly && widgetRef.current) {
         widgetRef.current.innerHTML = '';
         Calendly.initInlineWidget({
-          // URLSearchParams writes spaces as '+', but Calendly's widget
-          // decodeURIComponent()s the params (which leaves '+' alone) and
-          // re-encodes — so a '+' arrives as a literal plus and the fallback
-          // prefill renders "Jane+Smith". Re-encode spaces as %20. Safe: in a
-          // URLSearchParams string a bare '+' can only ever mean a space
-          // (a literal plus is already %2B).
-          url: url.toString().replace(/\+/g, '%20'),
+          url: bookingUrl,
           parentElement: widgetRef.current,
           prefill,
           utm,
         });
+        return;
+      }
+      // ~10s of retries, then give up and show the direct-link fallback —
+      // retrying forever just holds the visitor hostage in a locked overlay.
+      if (++tries > 100) {
+        setFailed(true);
         return;
       }
       window.setTimeout(tryInit, 100);
@@ -151,12 +171,33 @@ export function CalendlyModal({ open, lead }: CalendlyModalProps) {
   if (!open || typeof document === 'undefined') return null;
 
   return createPortal(
-    <div className="calendly-overlay" role="dialog" aria-modal="true">
+    <div
+      className="calendly-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Select a time for your free consultation"
+    >
       <div className="calendly-modal">
         <h3 className="title-h3 white calendly-modal-title">
           <u>Last step:</u> select a time for your free consultation
         </h3>
-        <div ref={widgetRef} className="calendly-embed" style={{ minWidth: 320, height: 700 }} />
+        {failed ? (
+          // The widget never arrived — hand the visitor the same booking page
+          // directly. Their details are already captured via submitLead.
+          <div className="calendly-fallback">
+            <p className="text-body-large white">
+              The booking calendar didn&apos;t load — no problem, your details are safe.
+            </p>
+            <a className="cta-main max-content" href={bookingUrlRef.current} target="_blank" rel="noopener noreferrer">
+              <span className="title-h5">Open The Booking Page</span>
+            </a>
+            <p className="text-body-regular white">
+              Pick any time that suits you — it&apos;s the same calendar.
+            </p>
+          </div>
+        ) : (
+          <div ref={widgetRef} className="calendly-embed" style={{ minWidth: 320, height: 700 }} />
+        )}
       </div>
     </div>,
     document.body,

@@ -24,6 +24,11 @@ export default function HeroSection({ section }: HeroSectionProps) {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Once the booking modal is open the form is done: a stray second Enter
+    // (focus stays on the background input — the overlay only blocks clicks)
+    // would send a duplicate lead, double-fire the GTM conversion, and
+    // re-initialise the Calendly widget mid-load.
+    if (showCalendly) return;
     const isValid = validate(formRef.current);
     if (!isValid) return;
     // Held in state (not passed inline) so its identity is stable — CalendlyModal

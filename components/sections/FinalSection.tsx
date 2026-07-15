@@ -40,6 +40,9 @@ export default function FinalSection({ section }: FinalSectionProps) {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Guard against a second Enter after the modal opens — it would send a
+    // duplicate lead and double-fire the GTM conversion (see HeroSection).
+    if (showCalendly) return;
     const isValid = validate(formRef.current);
     if (!isValid) return;
     // Held in state (not passed inline) so its identity is stable — CalendlyModal
