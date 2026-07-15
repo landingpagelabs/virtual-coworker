@@ -55,7 +55,9 @@ export function submitLead(
     // own Google Ads accounts.
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'lpl_form_submitted',
+      // NB: this string must match the GTM Custom Event triggers exactly —
+      // the container is built on 'lpl_form_submission' (Tyce, 2026-07-15).
+      event: 'lpl_form_submission',
       form_placement: source,
       page: data.page,
     });
