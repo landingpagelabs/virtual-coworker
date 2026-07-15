@@ -482,6 +482,9 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .congrats-hero_title{max-width:898px;color:#1a1a1a;font-size:54px;font-weight:600;line-height:1.1;letter-spacing:-1.35px;margin-bottom:25px;}
 .congrats-hero_subtitle{max-width:714px;color:#1a1a1a;font-size:18px;line-height:1.37;letter-spacing:-0.18px;margin-bottom:40px;}
 .congrats-chevron{display:flex;align-items:center;justify-content:center;width:50px;height:50px;background:rgba(255,255,255,0.5);border:none;border-radius:16px;box-shadow:0 1px 1px rgba(51,51,51,0.05),0 3px 3px rgba(51,51,51,0.05),0 6px 6px rgba(51,51,51,0.05),0 24px 24px rgba(51,51,51,0.05);cursor:pointer;transition:transform .25s ease;}
+/* Inside a step card only (the hero chevron keeps its own spacing): Figma has
+   30px between the step-3 paragraph and the chevron (5252:36406). */
+.congrats-step .congrats-chevron{margin-top:30px;}
 .congrats-chevron:hover{transform:translateY(3px);}
 
 .congrats-steps{background:#fff;scroll-margin-top:20px;}
@@ -513,11 +516,11 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .congrats-invite_rsvp{display:flex;gap:10px;margin-top:14px;}
 .congrats-invite_yes-wrap{position:relative;}
 .congrats-invite_btn{padding:7px 16px;background:#fff;border:1px solid rgba(26,26,26,0.18);border-radius:4px;font-size:13px;color:#222;cursor:default;}
-.congrats-invite_circle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:44px;pointer-events:none;}
+.congrats-invite_circle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:59px;height:57px;pointer-events:none;}
 .congrats-invite_hint{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin-top:10px;margin-left:51px;color:#008f2b;font-size:18px;font-weight:700;line-height:1;}
 .congrats-invite_hint-arrow{flex:none;width:59px;height:32px;}
 
-.congrats-bubble{max-width:557px;background:#077dff;border-radius:10px;padding:15px 30px 20px;margin-top:30px;text-align:left;}
+.congrats-bubble{max-width:557px;background:#077dff;border-radius:10px;padding:15px 30px 20px;margin-top:30px;text-align:left;cursor:pointer;}
 .congrats-bubble p{color:#fff;font-size:16px;line-height:1.45;}
 .congrats-copy{display:flex;align-items:center;gap:10px;margin-top:20px;padding:9px 16px 9px 12px;background:#fff;border:none;border-radius:6px;box-shadow:0 4px 4px rgba(23,23,23,0.04),0 1px 2px rgba(0,0,0,0.12),0 0 0 1px rgba(0,0,0,0.06);font-size:16px;font-weight:500;line-height:1.45;letter-spacing:-0.16px;color:#1a1a1a;cursor:pointer;transition:background .2s ease;}
 .congrats-copy:hover{background:#f0f0f0;}

@@ -2,7 +2,14 @@ import { DynamicMonth } from '@/components/DynamicMonth';
 
 const AWARD_DIMS: Record<number, [number, number]> = {1: [102, 103], 2: [102, 102], 3: [97, 97], 4: [102, 110], 5: [102, 102], 6: [102, 102]};
 
-export default function Footer() {
+interface FooterProps {
+  /** Congrats pages drop the whole CTA row (button + limited-spots pointer) —
+      the visitor just booked, and #consultation doesn't exist there. Matches
+      the MegaFooter instance on the congrats Figma frame (5252:34322). */
+  hideCta?: boolean;
+}
+
+export default function Footer({ hideCta }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -27,6 +34,7 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
+              {!hideCta && (
               <div className="footer-head_down">
                 <a href="#consultation" className="footer_cta-wrap">
                   <button className="cta-main max-content">
@@ -46,6 +54,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
+              )}
             </div>
 
             <div className="footer_content-wrap">

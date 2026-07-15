@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { ModalSmall } from '@/components/ModalSmall';
 import HeroSection from '@/components/sections/HeroSection';
 import CsSection from '@/components/sections/CsSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -78,12 +79,15 @@ function renderSection(section: Section) {
 }
 
 export default function PageBuilder({ page }: PageBuilderProps) {
-  // The congrats page brings its own minimal nav (logo + booked badge), so
-  // the standard header is skipped there.
-  const hasOwnNav = page.sections?.some((s) => s._type === 'congratsHeaderSection');
+  // The congrats pages bring their own minimal nav (logo + booked badge), so
+  // the standard header is skipped there. The same flag drives everything
+  // else that must NOT appear after a booking (Figma annotations 2026-07-15):
+  // no exit-intent pop pitching a consultation they just booked, and no
+  // footer CTA button (its #consultation anchor doesn't even exist there).
+  const isCongrats = page.sections?.some((s) => s._type === 'congratsHeaderSection');
   return (
     <>
-      {!hasOwnNav && <Header />}
+      {!isCongrats && <Header />}
       <main>
         {page.sections?.map((section) => (
           <div key={section._key}>
@@ -91,7 +95,8 @@ export default function PageBuilder({ page }: PageBuilderProps) {
           </div>
         ))}
       </main>
-      <Footer />
+      <Footer hideCta={isCongrats} />
+      {!isCongrats && <ModalSmall />}
     </>
   );
 }

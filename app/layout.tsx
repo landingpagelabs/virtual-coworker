@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { FaviconNotifier } from '@/components/FaviconNotifier';
-import { ModalSmall } from '@/components/ModalSmall';
 
 // Canonical production domain. Never fall back to VERCEL_URL — that bakes a
 // per-deployment host into og/canonical tags, which breaks link previews as
@@ -85,7 +84,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* End Google Tag Manager (noscript) */}
         <FaviconNotifier />
         {children}
-        <ModalSmall />
+        {/* The exit-intent pop (ModalSmall) is rendered by PageBuilder, not
+            here — it must not appear on the congrats pages (Figma annotation
+            on 2008:10641), and PageBuilder knows which pages those are. */}
       </body>
     </html>
   );

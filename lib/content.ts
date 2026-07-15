@@ -9,13 +9,20 @@ import congrats from '@/content/congrats.json';
 // paths exist so the booking region rides in the URL itself. Each Calendly
 // calendar redirects to its own path, and GTM region-gates the booking
 // conversion on Page Path (a query param could be dropped or typo'd silently;
-// a wrong path 404s loudly). /congrats stays as a neutral fallback.
+// a wrong path 404s loudly). /congrats stays as a neutral fallback (US copy).
+//
+// The APAC variant is DERIVED at build time: identical copy, with landing-page
+// links region-swapped (the referral message's try.virtualcoworker.com/us →
+// /apac; Tyce 2026-07-15). One source of truth, no copy drift between geos.
+const apacCongrats = JSON.parse(
+  JSON.stringify(congrats).split('try.virtualcoworker.com/us').join('try.virtualcoworker.com/apac'),
+);
 const pages: Record<string, unknown> = {
   us,
   apac,
   congrats,
   'us-congrats': congrats,
-  'apac-congrats': congrats,
+  'apac-congrats': apacCongrats,
 };
 
 export interface PageContent {

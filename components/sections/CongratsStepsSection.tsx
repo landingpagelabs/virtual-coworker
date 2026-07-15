@@ -39,9 +39,16 @@ const InviteMockup = () => (
         <div className="congrats-invite_rsvp">
           <div className="congrats-invite_yes-wrap">
             <button type="button" className="congrats-invite_btn">Yes ▾</button>
-            <svg className="congrats-invite_circle" viewBox="0 0 74 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="37" cy="22" rx="34" ry="19" stroke="#12A557" strokeWidth="2.5" />
-            </svg>
+            {/* Hand-drawn circle around "Yes", exported from Figma 5252:25457
+                (a geometric ellipse here read as clip-art — "this image isn't
+                right", 2026-07-15 annotation). */}
+            <img
+              className="congrats-invite_circle"
+              src="/images/sections/congrats/invite-circle.svg"
+              alt=""
+              width={59}
+              height={57}
+            />
           </div>
           <button type="button" className="congrats-invite_btn">Maybe</button>
           <button type="button" className="congrats-invite_btn">No</button>
@@ -99,7 +106,22 @@ export default function CongratsStepsSection({ section }: CongratsStepsSectionPr
 
                 {step.copyMessage && (
                   <>
-                    <div className="congrats-bubble">
+                    {/* The bubble itself also copies on click/Enter (Figma
+                        annotation on 5252:36399) — same action as the button
+                        below, whose label doubles as the confirmation. */}
+                    <div
+                      className="congrats-bubble"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Copy the referral message"
+                      onClick={() => copyMessage(step.copyMessage!)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          copyMessage(step.copyMessage!);
+                        }
+                      }}
+                    >
                       <p>{step.copyMessage}</p>
                     </div>
                     <button
