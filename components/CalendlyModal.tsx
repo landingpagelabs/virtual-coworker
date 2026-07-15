@@ -24,7 +24,7 @@ const SPLIT_NAME_SLUGS = new Set(['apac']);
 
 /**
  * Form field -> Calendly UTM key. Calendly accepts these five and nothing else,
- * so gclid has no home here; it still reaches the CRM via /api/lead.
+ * so gclid has no home here; it still reaches the CRM via the lead submit.
  */
 const UTM_FIELDS: Record<string, string> = {
   utm_source: 'utmSource',
@@ -72,7 +72,7 @@ export function CalendlyModal({ open, lead }: CalendlyModalProps) {
     // Carry what the visitor just typed into the booking form, so they don't
     // retype it. Only name and email: neither event type asks for phone,
     // company or country, so those have nowhere to land (they still reach the
-    // CRM via /api/lead). No customAnswers either — a1 on the US event is the
+    // CRM via the lead submit). No customAnswers either — a1 on the US event is the
     // "anything that will help prepare" box, and we have nothing for it.
     const first = lead?.['first-name']?.trim() || '';
     const last = lead?.['last-name']?.trim() || '';
@@ -121,7 +121,13 @@ export function CalendlyModal({ open, lead }: CalendlyModalProps) {
       if (Calendly && widgetRef.current) {
         widgetRef.current.innerHTML = '';
         Calendly.initInlineWidget({
-          url: url.toString(),
+          // URLSearchParams writes spaces as '+', but Calendly's widget
+          // decodeURIComponent()s the params (which leaves '+' alone) and
+          // re-encodes — so a '+' arrives as a literal plus and the fallback
+          // prefill renders "Jane+Smith". Re-encode spaces as %20. Safe: in a
+          // URLSearchParams string a bare '+' can only ever mean a space
+          // (a literal plus is already %2B).
+          url: url.toString().replace(/\+/g, '%20'),
           parentElement: widgetRef.current,
           prefill,
           utm,
