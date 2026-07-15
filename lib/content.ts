@@ -4,7 +4,19 @@ import congrats from '@/content/congrats.json';
 
 // Static page content, snapshotted from the retired Sanity CMS on 2026-07-13.
 // To edit copy: edit the JSON in content/ and redeploy.
-const pages: Record<string, unknown> = { us, apac, congrats };
+//
+// /us-congrats and /apac-congrats serve the SAME congrats content — separate
+// paths exist so the booking region rides in the URL itself. Each Calendly
+// calendar redirects to its own path, and GTM region-gates the booking
+// conversion on Page Path (a query param could be dropped or typo'd silently;
+// a wrong path 404s loudly). /congrats stays as a neutral fallback.
+const pages: Record<string, unknown> = {
+  us,
+  apac,
+  congrats,
+  'us-congrats': congrats,
+  'apac-congrats': congrats,
+};
 
 export interface PageContent {
   title?: string;
