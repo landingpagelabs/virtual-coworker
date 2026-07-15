@@ -59,11 +59,18 @@ export default function FaqSection({ section }: FaqSectionProps) {
     });
 
   // Set each panel's height to its content (so long answers aren't clipped).
+  // Re-measured on resize: a viewport change reflows the answer text, and a
+  // maxHeight computed at the old width would clip the new line count.
   useEffect(() => {
-    panelRefs.current.forEach((panel, i) => {
-      if (!panel) return;
-      panel.style.maxHeight = openIndexes.has(i) ? `${panel.scrollHeight + 24}px` : '0px';
-    });
+    const apply = () => {
+      panelRefs.current.forEach((panel, i) => {
+        if (!panel) return;
+        panel.style.maxHeight = openIndexes.has(i) ? `${panel.scrollHeight + 24}px` : '0px';
+      });
+    };
+    apply();
+    window.addEventListener('resize', apply);
+    return () => window.removeEventListener('resize', apply);
   }, [openIndexes]);
 
   return (

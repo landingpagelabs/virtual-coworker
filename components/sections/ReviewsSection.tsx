@@ -91,7 +91,7 @@ export default function ReviewsSection({ section }: ReviewsSectionProps) {
   const gridRef = useRef<HTMLDivElement>(null);
   const masonryRef = useRef<any>(null);
 
-  // Initialise Masonry once the CDN script is available.
+  // Initialise Masonry once the self-hosted vendor script is available.
   useEffect(() => {
     if (typeof window === 'undefined') return;
 

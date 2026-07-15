@@ -9,12 +9,28 @@
  */
 const loaded = new Map<string, Promise<void>>();
 
+/** The global each vendor script defines once it has executed (the same
+    names the consuming components read off `window`). */
+const GLOBAL_FOR_SRC: Record<string, string> = {
+  '/vendor/splide.min.js': 'Splide',
+  '/vendor/splide-auto-scroll.min.js': 'splide', // extension namespace object
+  '/vendor/masonry.pkgd.min.js': 'Masonry',
+};
+
 export function loadScript(src: string): Promise<void> {
   const cached = loaded.get(src);
   if (cached) return cached;
   const p = new Promise<void>((resolve, reject) => {
+    // A script tag we didn't create may have ALREADY fired its load event —
+    // listeners added now would never be called and the promise would hang
+    // forever. If the script's global is present, it has executed: resolve.
     const existing = document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);
     if (existing) {
+      const globalName = GLOBAL_FOR_SRC[src];
+      if (globalName && (window as any)[globalName]) {
+        resolve();
+        return;
+      }
       existing.addEventListener('load', () => resolve());
       existing.addEventListener('error', () => reject(new Error(src)));
       return;

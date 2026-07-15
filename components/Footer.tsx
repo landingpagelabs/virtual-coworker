@@ -1,4 +1,4 @@
-import { DynamicMonth } from '@/components/DynamicMonth';
+import { DynamicMonth, DynamicYear } from '@/components/DynamicMonth';
 
 const AWARD_DIMS: Record<number, [number, number]> = {1: [102, 103], 2: [102, 102], 3: [97, 97], 4: [102, 110], 5: [102, 102], 6: [102, 102]};
 
@@ -10,7 +10,6 @@ interface FooterProps {
 }
 
 export default function Footer({ hideCta }: FooterProps) {
-  const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -122,7 +121,7 @@ export default function Footer({ hideCta }: FooterProps) {
               <div className="item_footer-down">
                 <div className="item-footer-down_text-wrap">
                   <p className="text-label-extra-small is-white">
-                    Virtual Coworker Inc. © {year}. All Rights Reserved.
+                    Virtual Coworker Inc. © <DynamicYear />. All Rights Reserved.
                   </p>
                 </div>
               </div>

@@ -43,13 +43,11 @@ li{text-decoration:none;color:inherit;list-style:none;}
 .title-h1{color:#000;font-family:'Inter';font-size:54px;font-weight:600;line-height:110%;letter-spacing:-1.35px;}
 .title-h2{color:#000;font-family:'Inter';font-size:40px;font-weight:600;line-height:115%;letter-spacing:-0.6px;}
 .title-h3{color:#000;font-family:'Inter';font-size:33px;font-weight:600;line-height:125%;letter-spacing:-0.495px;}
-.title-h4{color:#000;font-family:'Inter';font-size:28px;font-weight:600;line-height:120%;letter-spacing:-0.28px;}
 .title-h5{color:#000;font-family:'Inter';font-size:24px;font-weight:600;line-height:120%;letter-spacing:-0.24px;}
 .text-body-large{color:#000;font-family:'Inter';font-size:18px;font-weight:400;line-height:137%;letter-spacing:-0.18px;}
 .text-body-regular{color:#000;font-family:'Inter';font-size:16px;font-weight:400;line-height:145%;}
 .text-body-small{color:#000;font-family:'Inter';font-size:14px;font-weight:400;line-height:135%;letter-spacing:-0.14px;}
 .text-body-caption{color:#000;font-family:'Inter';font-size:12px;font-weight:400;line-height:150%;}
-.text-label-x-large{color:#000;font-family:'Inter';font-size:20px;font-weight:600;line-height:145%;letter-spacing:-0.2px;}
 .text-label-large{color:#000;font-family:'Inter';font-size:18px;font-weight:500;line-height:145%;letter-spacing:-0.18px;}
 .text-label-medium{color:#000;font-family:'Inter';font-size:16px;font-weight:500;line-height:145%;letter-spacing:-0.16px;}
 .text-label-small{color:#1A1A1A;font-family:'Inter';font-size:15px;font-weight:500;line-height:145%;letter-spacing:-0.15px;}

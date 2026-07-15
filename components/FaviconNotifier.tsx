@@ -25,10 +25,9 @@ export function FaviconNotifier() {
 
     const originalTitle = document.title;
     let flashInterval: ReturnType<typeof setInterval> | null = null;
-    let preventFlashing = false;
 
     const startFlashing = () => {
-      if (preventFlashing || flashInterval) return;
+      if (flashInterval) return;
       let isFlashing = false;
       flashInterval = setInterval(() => {
         document.title = isFlashing ? FLASH_TITLE : originalTitle;
@@ -47,28 +46,17 @@ export function FaviconNotifier() {
     const onVisibilityChange = () => {
       if (document.hidden) {
         setFavicon(CHANGED_FAVICON);
-        if (!preventFlashing) startFlashing();
+        startFlashing();
       } else {
         setFavicon(DEFAULT_FAVICON);
         stopFlashing();
       }
     };
 
-    // Buttons with data-stop-flashing="true" permanently disable the flashing.
-    const stopButtons = Array.from(
-      document.querySelectorAll<HTMLElement>("[data-stop-flashing='true']"),
-    );
-    const onStopClick = () => {
-      preventFlashing = true;
-      stopFlashing();
-    };
-    stopButtons.forEach((button) => button.addEventListener('click', onStopClick));
-
     document.addEventListener('visibilitychange', onVisibilityChange);
 
     return () => {
       document.removeEventListener('visibilitychange', onVisibilityChange);
-      stopButtons.forEach((button) => button.removeEventListener('click', onStopClick));
       stopFlashing();
       setFavicon(DEFAULT_FAVICON);
     };
