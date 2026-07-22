@@ -1,16 +1,10 @@
-// Countries offered in the consultation forms — the markets Virtual Coworker
-// actually serves (Tyce, 2026-07-13). Values match the labels (full names) to
-// line up with autocomplete="country-name". "Other" keeps a stray good-fit
-// lead from being blocked at the last field.
+// Countries offered in the consultation forms — hard-gated to the two markets
+// Virtual Coworker serves (Tyce, 2026-07-22). The Country <select> is required
+// and there is deliberately NO "Other": a visitor outside these two cannot
+// submit. This is an intentional hard gate to US + AU, not an oversight — do
+// not re-add the wider list. Values match the labels (full names) to line up
+// with autocomplete="country-name".
 export const COUNTRIES = [
   'United States',
   'Australia',
-  'New Zealand',
-  'Canada',
-  'Singapore',
-  'United Kingdom',
-  'United Arab Emirates',
-  'Hong Kong',
-  'Malaysia',
-  'Other',
 ];
