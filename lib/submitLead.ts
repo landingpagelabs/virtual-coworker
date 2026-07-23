@@ -4,7 +4,12 @@ declare global {
   }
 }
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mlgyjjlv';
+// One Formspree form per region: a form carries exactly one webhook, and
+// Zoho Flow needs a separate incoming webhook for each region's leads.
+// APAC is matched by path prefix, same as the GTM triggers, so future
+// split-test paths (/apac-b) keep routing to the right form.
+const FORMSPREE_ENDPOINT_US = 'https://formspree.io/f/mlgyjjlv';
+const FORMSPREE_ENDPOINT_APAC = 'https://formspree.io/f/xvzebnzw';
 
 /**
  * Sends the consultation lead straight to Formspree from the browser — the
@@ -81,7 +86,11 @@ export function submitLead(
       GCLID: data['gclid'] ?? '',
     };
 
-    void fetch(FORMSPREE_ENDPOINT, {
+    const endpoint = data.page.startsWith('apac')
+      ? FORMSPREE_ENDPOINT_APAC
+      : FORMSPREE_ENDPOINT_US;
+
+    void fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(payload),
