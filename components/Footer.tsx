@@ -104,14 +104,6 @@ export default function Footer({ hideCta }: FooterProps) {
 
             <div className="footer_down">
               <div className="item_footer-down">
-                <div className="item-footer-down_image">
-                  <img src="/images/footer/footer_bottom-icon.avif" width={96} height={96} alt="" loading="lazy" decoding="async" />
-                </div>
-                <div className="item-footer-down_text-wrap">
-                  <p className="text-label-extra-small is-white">Built By Landing Page Labs</p>
-                </div>
-              </div>
-              <div className="item_footer-down">
                 <div className="item-footer-down_text-wrap">
                   <p className="text-label-extra-small is-white">
                     <a href="https://virtualcoworker.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
