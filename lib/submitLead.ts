@@ -73,6 +73,13 @@ export function submitLead(
       'First Name': data['first-name'] ?? '',
       'Last Name': data['last-name'] ?? '',
       Email: data['work-email'] ?? '',
+      // Formspree's thank-you autoresponse only fires when the submission
+      // carries a field literally titled `email` — lowercase, no case
+      // matching (docs verified 2026-07-24; Tyce's live submit confirmed
+      // `Email` alone doesn't trigger it). `Email` above stays for the 1:1
+      // Zoho Lead-field mapping; this duplicate exists solely for the
+      // autoresponse and costs one extra Formspree column.
+      email: data['work-email'] ?? '',
       Phone: data['phone'] ?? '',
       Company: data['company-name'] ?? '',
       Country: data['country'] ?? '',
